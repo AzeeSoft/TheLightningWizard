@@ -11,7 +11,7 @@ public class LightningBall : MonoBehaviour {
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody> ();
 		rb.velocity = (transform.forward * speed); //Instantly apply force towards the bullets forward direction on the bullet
-		Destroy(gameObject, 1f);
+		Destroy(gameObject, 2f);
 	}
 
 	void OnTriggerEnter(Collider other) {
