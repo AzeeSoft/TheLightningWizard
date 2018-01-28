@@ -17,6 +17,8 @@ public class TeleportMove : MonoBehaviour
     public float dabPercent = 10f;
     public float teleportRangeAjdusment = 10f;
 
+    public float teleportMaxTime = 0.5f;
+
     public ParticleSystem transmissionParticleSystem;
 
     [HideInInspector]
@@ -31,6 +33,8 @@ public class TeleportMove : MonoBehaviour
     Vector3 teleportTarget;
 
     Vector3 oldScale;
+
+    float teleportStartTime;
 
     void Awake()
     {
@@ -74,37 +78,46 @@ public class TeleportMove : MonoBehaviour
 
 	    if (currentState != State.Idle)
 	    {
-	        float totalDist = Vector3.Distance(teleportSource, teleportTarget);
-	        float currentDist = Vector3.Distance(teleportSource, transform.position);
-
-	        if (currentDist >= totalDist)
+	        if (Time.time - teleportStartTime > teleportMaxTime)
 	        {
 	            stopTeleport();
 	        }
 	        else
 	        {
-	            float dabInterval = ((totalDist*dabPercent)/100);
 
-                Debug.Log("TD: " + totalDist);
-                Debug.Log("CD: " + currentDist);
-                Debug.Log("DI: " + dabInterval);
+	            float totalDist = Vector3.Distance(teleportSource, teleportTarget);
+	            float currentDist = Vector3.Distance(teleportSource, transform.position);
 
-	            if (currentDist < dabInterval)
+	            if (currentDist >= totalDist)
                 {
-                    currentState = State.Dabbing;
-                    oldScale = transform.localScale;
-                } else if (currentDist >= dabInterval && currentDist < (totalDist - dabInterval))
-                {
-                    currentState = State.Teleporting;
-                    transform.localScale = Vector3.zero;
-                }
-                else
-                {
-                    currentState = State.Dabbing;
-                    transform.localScale = oldScale;
-                }
+                    stopTeleport();
+	            }
+	            else
+	            {
+	                float dabInterval = ((totalDist*dabPercent)/100);
 
-	            characterController.Move((teleportTarget - transform.position).normalized * teleportSpeed);
+	                Debug.Log("TD: " + totalDist);
+	                Debug.Log("CD: " + currentDist);
+	                Debug.Log("DI: " + dabInterval);
+
+	                if (currentDist < dabInterval)
+	                {
+	                    currentState = State.Dabbing;
+	                    oldScale = transform.localScale;
+	                }
+	                else if (currentDist >= dabInterval && currentDist < (totalDist - dabInterval))
+	                {
+	                    currentState = State.Teleporting;
+	                    transform.localScale = Vector3.zero;
+	                }
+	                else
+	                {
+	                    currentState = State.Dabbing;
+	                    transform.localScale = oldScale;
+	                }
+
+	                characterController.Move((teleportTarget - transform.position).normalized*teleportSpeed);
+	            }
 	        }
 	    }
 	}
@@ -121,10 +134,14 @@ public class TeleportMove : MonoBehaviour
         playerController.anim.SetTrigger("Teleport");
 
         transmissionParticleSystem.Play();
+
+        teleportStartTime = Time.time;
     }
 
     void stopTeleport()
     {
+        transform.localScale = oldScale;
+
         playerController.canMove = true;
         currentState = State.Idle;
 
