@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour {
     public Image bar;
     //magic bar
     public Image magicBar;
+    //gameover panel
+    public GameObject gameover;
     //Opening SaveFile
     private const string FILE_NAME = "Save.dat";
     void Start () {
@@ -62,8 +64,9 @@ public class GameManager : MonoBehaviour {
 
 
     }
-    private void FixedUpdate(){
-        
+    private void FixedUpdate()
+    {
+
         if (ex >= nextLevel)
         {
             //Run Levelup and raise next Level
@@ -71,15 +74,15 @@ public class GameManager : MonoBehaviour {
             nextLevel += nextLevel;
         }
 
-        if(numOfEnemies <= 0)
+        if (numOfEnemies <= 0)
         {
             //SpawnEnemy();
         }
 
         bar.fillAmount = (float)Health / (float)mHealth;
         magicBar.fillAmount = (float)Mana / (float)mMana;
-        //bar.transform.localScale = new Vector3(Mathf.Clamp(((float)Health / (float)mHealth), 0f, 1f), bar.transform.localScale.y, bar.transform.localScale.z);
     }
+
     // Update is called once per frame
     public void Update () {
         if (Input.GetKeyDown(KeyCode.F1))
@@ -97,6 +100,10 @@ public class GameManager : MonoBehaviour {
             SpawnEnemy();
             print("SpawnEnemy");
         }
+        if(Health==0){
+            
+        }
+
         //curLevelText.text=("Level: " + Level);
         //PlayerLevelText.text = ("Player Level: " + pLevel);
         //exText.text = ("ex: " + ex);
