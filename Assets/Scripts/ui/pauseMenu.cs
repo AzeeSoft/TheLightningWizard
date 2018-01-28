@@ -11,11 +11,13 @@ public class pauseMenu : MonoBehaviour {
 
     public GameObject optionsVol;
     private GameManager gameloop;
+  
 
     void Start()
     {
         gameloop = GameObject.Find("GM").GetComponent<GameManager>();
         FindObjectOfType<SoundManager>().Play("LWGameplayTrack");
+
     }
 	
 	// Update is called once per frame
@@ -92,5 +94,9 @@ public class pauseMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("startMenu", LoadSceneMode.Single);//loads start menu
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+    }
+
+    public void GetVolume(float vol){
+        AudioListener.volume = vol;
     }
 }

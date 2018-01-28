@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
     //Max out button
     //public Button maxOutBtn;
     //health bar
-    //public GameObject bar;
+    public Image bar;
     //magic bar
     public Image magicBar;
     //Opening SaveFile
@@ -76,9 +76,9 @@ public class GameManager : MonoBehaviour {
             //SpawnEnemy();
         }
 
-        //bar.transform.localScale = new Vector3(Mathf.Clamp(((float)Health / (float)mHealth), 0f, 1f),bar.transform.localScale.y,bar.transform.localScale.z);
-        //magicBar.fillAmount = (float)Mana / (float)mMana;
-
+        bar.fillAmount = (float)Health / (float)mHealth;
+        magicBar.fillAmount = (float)Mana / (float)mMana;
+        //bar.transform.localScale = new Vector3(Mathf.Clamp(((float)Health / (float)mHealth), 0f, 1f), bar.transform.localScale.y, bar.transform.localScale.z);
     }
     // Update is called once per frame
     public void Update () {

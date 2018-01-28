@@ -58,12 +58,9 @@ MonoBehaviour:
   Speed: 1
   Health: 10
   mHealth: 10
-  minAttack: 5
-  maxAttack: 10
-  minDefence: 5
-  maxDefence: 10
-  Magic: 15
-  maxMagic: 15
+  Mana: 10
+  mMana: 10
+  Souls: 10
   playerIsDead: 1
   player: {fileID: 0}
   pSpawner: {fileID: 0}
@@ -79,7 +76,5 @@ MonoBehaviour:
   attackText: {fileID: 0}
   defenceText: {fileID: 0}
   magicText: {fileID: 0}
-  upgradeBtn: {fileID: 0}
-  maxOutBtn: {fileID: 0}
   bar: {fileID: 0}
   magicBar: {fileID: 0}
