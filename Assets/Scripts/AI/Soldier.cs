@@ -16,7 +16,6 @@ public class Soldier : MonoBehaviour
 
     private const string bulletSpawnerName = "bulletSpawner";
 
-    public Color HitColor;
 
     public GameObject bulletPrefab;
 
@@ -39,6 +38,8 @@ public class Soldier : MonoBehaviour
 
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
+
+   
 
     /// <summary>
     /// Counted in seconds
@@ -75,7 +76,7 @@ public class Soldier : MonoBehaviour
 	            break;
 
             case State.Attacking:
-                if (parentUnit != null && parentUnit.lastSeenPlayerLocation != null && !isDead)
+                if (parentUnit.lastSeenPlayerLocation != null && !isDead)
                     attackTowards(parentUnit.lastSeenPlayerLocation.Value);
                 break;
 
@@ -84,6 +85,12 @@ public class Soldier : MonoBehaviour
                 getLost();
                 break;
 	    }
+
+        if (Input.GetKey(KeyCode.U))
+        {
+            Die();
+        }
+        
 	}
 
     void LateUpdate()
@@ -181,6 +188,7 @@ public class Soldier : MonoBehaviour
         navMeshAgent.enabled = false;
         soldierCharacterController.enabled = false;
         bulletSpawnerTransform.gameObject.SetActive(false);
+        GetComponent<Collider>().enabled = false;
         setState(State.Dead);
         anim.SetTrigger("Die");
         StartCoroutine("Despawn");
@@ -192,5 +200,6 @@ public class Soldier : MonoBehaviour
         Destroy(this.gameObject);
       
     }
+
 
 }

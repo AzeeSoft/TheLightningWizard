@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpSpeed = 8.0F;
     public float gravityScale = 20.0F;
     public bool canMove = true;
+    public bool canCastSpell = true;
     public CharacterController player;
     public Animator anim;
     private Vector3 moveDirection = Vector3.zero;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
+
             StopMoving();
         }
 
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour {
     }
 	void Update()
 	{
-		if (Input.GetButtonDown("Fire2"))
+		if (Input.GetButtonDown("Fire2") && canCastSpell)
 			lightningBall ();
 
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
@@ -103,9 +105,11 @@ public class PlayerController : MonoBehaviour {
     IEnumerator LightningDelay()
     {
         canMove = false;
+        canCastSpell = false;
         anim.SetTrigger("LightningBall");
         yield return new WaitForSeconds(1f);
         canMove = true;
+        canCastSpell = true;
     }
 
 

@@ -11,8 +11,12 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject health;
     private Soldier solider;
 
-	// Use this for initialization
-	void Start () {
+    public SkinnedMeshRenderer[] rends;
+
+    public Color HitColor;
+
+    // Use this for initialization
+    void Start () {
 		curHP = maxHP;
         solider = GetComponent<Soldier>();
 	}
@@ -25,6 +29,7 @@ public class EnemyHealth : MonoBehaviour {
 	public void TakeDamage(int amt)
     {
         solider.anim.SetTrigger("Hit");
+        StartCoroutine("FlashRed");
 		if (curHP > 0)
         {
 			curHP -= amt;
@@ -51,4 +56,20 @@ public class EnemyHealth : MonoBehaviour {
 		Instantiate(mana, transform.position , transform.rotation);
 		Instantiate(health, transform.position , transform.rotation);
 	}
+
+    IEnumerator FlashRed()
+    {
+        print("FLASH!");
+        foreach (SkinnedMeshRenderer mat in rends)
+        {
+            mat.material.SetColor("_Highlight", HitColor);
+        }
+        yield return new WaitForSeconds(.25f);
+
+        foreach (SkinnedMeshRenderer mat in rends)
+        {
+            mat.material.SetColor("_Highlight", new Color(0, 0, 0, 0));
+        }
+
+    }
 }

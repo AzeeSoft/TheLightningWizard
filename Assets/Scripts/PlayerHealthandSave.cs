@@ -13,7 +13,7 @@ public class PlayerHealthandSave : MonoBehaviour {
 
     private PlayerController player;
 
-    public SkinnedMeshRenderer rend;
+    public SkinnedMeshRenderer[] rends;
 
     public Color HitColor;
 
@@ -96,6 +96,7 @@ public class PlayerHealthandSave : MonoBehaviour {
     public void Die()
     {
         player.canMove = false;
+        player.canCastSpell = false;
         player.anim.SetTrigger("Die");
         StartCoroutine("Respawn");
     }
@@ -103,17 +104,15 @@ public class PlayerHealthandSave : MonoBehaviour {
     IEnumerator FlashRed()
     {
         print("FLASH!");
-        Material[] mats = rend.materials;
-
-        foreach (Material mat in mats)
+        foreach (SkinnedMeshRenderer mat in rends)
         {
-            mat.SetColor("_Highlight", HitColor);
+            mat.material.SetColor("_Highlight", HitColor);
         }
         yield return new WaitForSeconds(.25f);
 
-        foreach (Material mat in mats)
+        foreach (SkinnedMeshRenderer mat in rends)
         {
-            mat.SetColor("_Highlight", new Color(0, 0, 0, 0));
+            mat.material.SetColor("_Highlight", new Color(0, 0, 0, 0));
         }
 
     }

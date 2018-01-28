@@ -2600,6 +2600,25 @@ MonoBehaviour:
   gameloop: {fileID: 0}
   mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
   health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
+  rends:
+  - {fileID: 137411179782072212}
+  - {fileID: 137746341351007958}
+  - {fileID: 137822577537204704}
+  - {fileID: 137950114967523080}
+  - {fileID: 137166511612313422}
+  - {fileID: 137069110956958832}
+  - {fileID: 137722546012734954}
+  - {fileID: 137893480409891796}
+  - {fileID: 137308083199589234}
+  - {fileID: 137714623302391830}
+  - {fileID: 137062554847096090}
+  - {fileID: 137887784948084738}
+  - {fileID: 137426124768806256}
+  - {fileID: 137907553484471316}
+  - {fileID: 137596772750333712}
+  - {fileID: 137632165951920218}
+  - {fileID: 137586374912111818}
+  HitColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &114870126994658676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2611,10 +2630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f799b710e24c248ac034588a8d692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitColor: {r: 0, g: 0, b: 0, a: 0}
   bulletPrefab: {fileID: 1106541552409474, guid: f8a4e40d2831229439b827dbc1344892,
     type: 2}
-  attackWaitTime: 0.5
+  attackWaitTime: 1
   bulletSpawnerTransform: {fileID: 0}
   anim: {fileID: 0}
   isAlberto: 0

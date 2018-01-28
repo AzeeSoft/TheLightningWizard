@@ -1328,7 +1328,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isThouching: 0
-  rend: {fileID: 137991500525801016}
+  rends:
+  - {fileID: 137155267842573538}
+  - {fileID: 137108208171987260}
+  - {fileID: 137392792301588510}
+  - {fileID: 137991500525801016}
   HitColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!137 &137108208171987260
 SkinnedMeshRenderer:

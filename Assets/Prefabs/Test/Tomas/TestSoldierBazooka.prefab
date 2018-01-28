@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1181282815621048, guid: 26d7dcc3e382a3f47aedcca4556568a4,
     type: 2}
-  attackWaitTime: 0.5
+  attackWaitTime: 5
   bulletSpawnerTransform: {fileID: 0}
   anim: {fileID: 0}
   isAlberto: 0
@@ -2018,10 +2018,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHP: 0
-  maxHP: 50
+  maxHP: 200
   gameloop: {fileID: 0}
   mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
   health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
+  rends:
+  - {fileID: 137177147235552818}
+  - {fileID: 137550311625758266}
+  - {fileID: 137890298330582516}
+  - {fileID: 137483005297785250}
+  - {fileID: 137732347887720876}
+  - {fileID: 137400134983291798}
+  - {fileID: 137474284898950608}
+  - {fileID: 137023069607809732}
+  - {fileID: 137862502636380836}
+  - {fileID: 137310974715398920}
+  - {fileID: 137186832834658090}
+  - {fileID: 137012647050725686}
+  - {fileID: 137429253019211728}
+  - {fileID: 137642842629940680}
+  - {fileID: 137340138615826026}
+  - {fileID: 137779508368661578}
+  - {fileID: 137800577109444994}
+  HitColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!137 &137012647050725686
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
