@@ -80,3 +80,4 @@ MonoBehaviour:
   magicBar: {fileID: 0}
   gameover: {fileID: 0}
   time: 40
+  sound: {fileID: 0}
