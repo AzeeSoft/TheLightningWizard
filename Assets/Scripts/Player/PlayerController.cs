@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
     }
 	void Update()
 	{
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire2"))
 			lightningBall ();
 
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
