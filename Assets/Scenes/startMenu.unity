@@ -210,34 +210,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114763615794128256, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 285724249}
-    - target: {fileID: 114452518845816864, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 285724249}
-    - target: {fileID: 114337782686498356, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 285724249}
     - target: {fileID: 114320742417767526, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 619944463}
-    - target: {fileID: 1762591288893504, guid: 1419797ff7f7f4bce8dd02ef1143d12f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720804389183456, guid: 1419797ff7f7f4bce8dd02ef1143d12f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1419797ff7f7f4bce8dd02ef1143d12f, type: 2}
   m_IsPrefabParent: 0
@@ -306,21 +283,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &265020367 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1980575836941684, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}
---- !u!1 &265020368 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1356246850188846, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}
---- !u!1 &265020369 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1612758956082374, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}
 --- !u!1 &285724244
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +294,6 @@ GameObject:
   - component: {fileID: 285724247}
   - component: {fileID: 285724246}
   - component: {fileID: 285724245}
-  - component: {fileID: 285724249}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -403,24 +364,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &285724249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 285724244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79352374937ab4f3ebe1547b37d2e5c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  credits: {fileID: 265020368}
-  controls: {fileID: 265020369}
-  us: {fileID: 1899069336}
-  splashGGJ: {fileID: 265020367}
-  splashD: {fileID: 2059640342}
-  backg: {fileID: 1319268238}
-  time: 400
 --- !u!1001 &619944462
 Prefab:
   m_ObjectHideFlags: 0
@@ -526,11 +469,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f156ce15a7724fa6ab0b580f77ba9e0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1319268238 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1875557456675758, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}
 --- !u!1 &1473727771
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,13 +531,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1899069336 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1485349681297174, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}
---- !u!1 &2059640342 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1762591288893504, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
-    type: 2}
-  m_PrefabInternal: {fileID: 170750649}

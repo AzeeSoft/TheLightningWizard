@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +13,8 @@ public class startScreen : MonoBehaviour
     public GameObject splashGGJ;
     public GameObject splashD;
     public GameObject backg;
+    public GameObject backbutton;
+
     public float time = 400f;
     bool timeron;
 
@@ -54,6 +55,11 @@ public class startScreen : MonoBehaviour
                 backg.SetActive(false);
                 us.SetActive(false);
             }
+            else if (time < 0f)
+            {
+                backg.SetActive(false);
+                us.SetActive(false);
+            }
         }
 
     }
@@ -72,15 +78,19 @@ public class startScreen : MonoBehaviour
     {
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
         controls.SetActive(true);
+        backbutton.SetActive(true);
     }
     public void CreditsButton()
     {
         timeron = true;
-
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+       
 
-
-
+    }
+    public void BackButton()
+    {
+        controls.SetActive(false);
+        backbutton.SetActive(false);
     }
 
 }
