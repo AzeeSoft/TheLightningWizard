@@ -66,7 +66,7 @@ public class startScreen : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("level1", LoadSceneMode.Single);//load scene level
+        SceneManager.LoadScene("levelOne", LoadSceneMode.Single);//load scene level
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
