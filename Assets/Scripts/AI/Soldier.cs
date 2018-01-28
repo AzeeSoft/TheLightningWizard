@@ -10,7 +10,8 @@ public class Soldier : MonoBehaviour
     {
         Idle,
         Marching,
-        Attacking
+        Attacking,
+        Dead
     }
 
     private const string bulletSpawnerName = "bulletSpawner";
@@ -31,6 +32,7 @@ public class Soldier : MonoBehaviour
     public Transform bulletSpawnerTransform;
 
     public Animator anim;
+    private bool isDead = false;
 
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
@@ -65,16 +67,25 @@ public class Soldier : MonoBehaviour
 	            break;
 
             case State.Marching:
-	            if (parentUnit.lastSeenPlayerLocation != null)
+	            if (parentUnit.lastSeenPlayerLocation != null && !isDead)
                     moveTowards(parentUnit.lastSeenPlayerLocation.Value);
 	            break;
 
             case State.Attacking:
-                if (parentUnit.lastSeenPlayerLocation != null)
+                if (parentUnit.lastSeenPlayerLocation != null && !isDead)
                     attackTowards(parentUnit.lastSeenPlayerLocation.Value);
+                break;
+
+            case State.Dead:
+                isDead = true;
+                getLost();
                 break;
 	    }
 
+        if (Input.GetKey(KeyCode.U))
+        {
+            Die();
+        }
         
 	}
 
@@ -123,6 +134,10 @@ public class Soldier : MonoBehaviour
 
     void attackTowards(Vector3 targetPos)
     {
+        if (isDead)
+        {
+            return;
+        }
         comeToAStop();
 
         targetPos.y = transform.position.y;
@@ -131,7 +146,7 @@ public class Soldier : MonoBehaviour
 //        Debug.Log("Now: " + Time.time);
 //        Debug.Log("Last: " + lastAttackTime);
 
-        if (Time.time - lastAttackTime > attackWaitTime)
+        if (Time.time - lastAttackTime > attackWaitTime && !isDead)
         {
             shoot(targetPos);
         }
@@ -139,11 +154,33 @@ public class Soldier : MonoBehaviour
 
     void shoot(Vector3 targetPos)
     {
+        if (isDead)
+        {
+            return;
+        }
         anim.SetTrigger("Shoot");
         GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
         SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();
 
         soldierBullet.setTarget(targetPos);
         lastAttackTime = Time.time;
+    }
+
+    public void Die()
+    {
+        setUnit(null);
+        navMeshAgent.enabled = false;
+        soldierCharacterController.enabled = false;
+        bulletSpawnerTransform.gameObject.SetActive(false);
+        setState(State.Dead);
+        anim.SetTrigger("Die");
+        StartCoroutine("Despawn");
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(10f);
+        Destroy(this.gameObject);
+      
     }
 }
