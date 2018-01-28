@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour {
 
         if (numOfEnemies <= 0)
         {
-            //SpawnEnemy();
+            SpawnEnemy();
         }
 
         bar.fillAmount = (float)Health / (float)mHealth;
@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour {
         foreach (GameObject respawn in eSpawners)
         {
             Instantiate(Enemy, respawn.transform.position, respawn.transform.rotation);
-            numOfEnemies++;
+            numOfEnemies = numOfEnemies + 3;
         }
     }
     //Spawning in Player;
