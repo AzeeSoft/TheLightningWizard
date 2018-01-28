@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     //Player
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour {
     public Image magicBar;
     //gameover panel
     public GameObject gameover;
+    //timer
+    public int time = 200;
     //Opening SaveFile
     private const string FILE_NAME = "Save.dat";
     void Start () {
@@ -100,8 +103,14 @@ public class GameManager : MonoBehaviour {
             SpawnEnemy();
             print("SpawnEnemy");
         }
-        if(Health==0){
-            
+        if (Health == 0)
+        {
+            gameover.SetActive(true);
+            countdown();
+            if (time == 0)
+            {
+                SceneManager.LoadScene("levelOne", LoadSceneMode.Single);//load scene level
+            }
         }
 
         //curLevelText.text=("Level: " + Level);
@@ -191,6 +200,10 @@ public class GameManager : MonoBehaviour {
         mHealth = Int32.Parse(sr.ReadLine());
 
         sr.Close();
+    }
+    void countdown(){
+        time--;
+        Debug.Log(time);
     }
 
 }

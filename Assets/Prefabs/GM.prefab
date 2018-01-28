@@ -78,3 +78,5 @@ MonoBehaviour:
   magicText: {fileID: 0}
   bar: {fileID: 0}
   magicBar: {fileID: 0}
+  gameover: {fileID: 0}
+  time: 40
