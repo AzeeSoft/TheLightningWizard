@@ -263,6 +263,14 @@ Prefab:
       propertyPath: gameloop
       value: 
       objectReference: {fileID: 548960268}
+    - target: {fileID: 4188981701298742, guid: a3f7656730473c346905fb9e819541da, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188981701298742, guid: a3f7656730473c346905fb9e819541da, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.63
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3f7656730473c346905fb9e819541da, type: 2}
   m_IsPrefabParent: 0
@@ -883,7 +891,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963537567}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52d249610f9140e09250558fe1d22d8, type: 3}
   m_Name: 

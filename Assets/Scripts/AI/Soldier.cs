@@ -30,6 +30,8 @@ public class Soldier : MonoBehaviour
     [HideInInspector]
     public Transform bulletSpawnerTransform;
 
+    public Animator anim;
+
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
 
@@ -50,6 +52,8 @@ public class Soldier : MonoBehaviour
 	// Use this for initialization
 	void Start () {
         setState(State.Idle);
+
+        anim = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -70,7 +74,21 @@ public class Soldier : MonoBehaviour
                     attackTowards(parentUnit.lastSeenPlayerLocation.Value);
                 break;
 	    }
+
+        
 	}
+
+    void LateUpdate()
+    {
+        if (navMeshAgent.velocity != Vector3.zero)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+    }
 
     public void setState(State state)
     {
@@ -84,6 +102,7 @@ public class Soldier : MonoBehaviour
 
     void comeToAStop()
     {
+      //  anim.SetBool("isWalking", false);
         navMeshAgent.ResetPath();
         navMeshAgent.velocity = Vector3.zero;
     }
@@ -91,6 +110,7 @@ public class Soldier : MonoBehaviour
 
     void moveTowards(Vector3 targetPos)
     {
+      //  anim.SetBool("isWalking", true);
         NavMeshPath navMeshPath = new NavMeshPath();
         navMeshAgent.CalculatePath(targetPos, navMeshPath);
         navMeshAgent.SetPath(navMeshPath);
@@ -119,6 +139,7 @@ public class Soldier : MonoBehaviour
 
     void shoot(Vector3 targetPos)
     {
+        anim.SetTrigger("Shoot");
         GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
         SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();
 
