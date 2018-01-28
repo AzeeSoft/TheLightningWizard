@@ -69,7 +69,11 @@ public class SoundManager : MonoBehaviour
             }
             else
             {
-                playRandomFrom(soldierDialogs);
+                Soldier[] soldiers = Resources.FindObjectsOfTypeAll<Soldier>();
+                if (soldiers.Length > 0)
+                {
+                    playRandomFrom(soldierDialogs);
+                }
             }
         }
     }
