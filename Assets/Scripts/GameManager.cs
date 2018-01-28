@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour {
     public GameObject gameover;
     //timer
     public int time = 200;
+    public soundArray sound;
     //Opening SaveFile
     private const string FILE_NAME = "Save.dat";
     void Start () {
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour {
         SpawnEnemy();
         spawnPlayer();
         //spawnPlayer();
-
+      
 
 
     }
@@ -206,4 +207,6 @@ public class GameManager : MonoBehaviour {
         Debug.Log(time);
     }
 
+
+    
 }
