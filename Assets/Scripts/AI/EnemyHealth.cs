@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour {
 	public int curHP;
 	public int maxHP = 50;
 	public GameManager gameloop;
+    public SoundManager soundManager;
 	public GameObject mana;
 	public GameObject health;
     private Soldier solider;
@@ -19,12 +20,18 @@ public class EnemyHealth : MonoBehaviour {
     void Start () {
 		curHP = maxHP;
         solider = GetComponent<Soldier>();
+
+        if (solider.isAlberto)
+        {
+            soundManager.play(soundManager.albertoSsup);
+        }
 	}
 
 	private void Awake()
 	{
 		gameloop = GameObject.Find("GM").GetComponent <GameManager> ();
-	}
+		soundManager = GameObject.Find("SM").GetComponent <SoundManager> ();
+    }
 
 	public void TakeDamage(int amt)
     {
@@ -32,6 +39,7 @@ public class EnemyHealth : MonoBehaviour {
         StartCoroutine("FlashRed");
 		if (curHP > 0)
         {
+            soundManager.playRandomFrom(soundManager.soldierHits);
 			curHP -= amt;
 			if (curHP <= 0)
             {
@@ -70,6 +78,5 @@ public class EnemyHealth : MonoBehaviour {
         {
             mat.material.SetColor("_Highlight", new Color(0, 0, 0, 0));
         }
-
     }
 }

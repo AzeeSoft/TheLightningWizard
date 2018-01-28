@@ -253,19 +253,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4665352608260108, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.50263625
+      value: 0.5026363
       objectReference: {fileID: 0}
     - target: {fileID: 4665352608260108, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.16459821
+      value: -0.16459823
       objectReference: {fileID: 0}
     - target: {fileID: 4665352608260108, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.7946527
+      value: 0.7946528
       objectReference: {fileID: 0}
     - target: {fileID: 4665352608260108, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.2979785
+      value: -0.29797852
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
@@ -643,23 +643,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1506086213 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1888278684232642, guid: 01a914fc88a23f542a47d818149c09dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 465984900}
---- !u!65 &1506086214
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1506086213}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1547893703
 GameObject:
   m_ObjectHideFlags: 0

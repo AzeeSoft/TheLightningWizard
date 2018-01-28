@@ -16,7 +16,7 @@ public class pauseMenu : MonoBehaviour {
     void Start()
     {
         gameloop = GameObject.Find("GM").GetComponent<GameManager>();
-        FindObjectOfType<SoundManager>().Play("LWGameplayTrack");
+//        FindObjectOfType<SoundManager>().Play("LWGameplayTrack");
 
     }
 	

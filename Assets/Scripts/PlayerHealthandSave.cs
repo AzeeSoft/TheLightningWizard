@@ -17,9 +17,13 @@ public class PlayerHealthandSave : MonoBehaviour {
 
     public Color HitColor;
 
+    public SoundManager soundManager;
+
 	void Start () {
 		gameloop = GameObject.Find("GM").GetComponent <GameManager> ();
+		soundManager = GameObject.Find("SM").GetComponent <SoundManager> ();
         player = GetComponent<PlayerController>();
+
 	}
 	
 	// Update is called once per frame
@@ -39,6 +43,7 @@ public class PlayerHealthandSave : MonoBehaviour {
 			}
 		}
 	}
+
 	public void manaUp(){
 		if(gameloop.Mana<gameloop.mMana)
 			gameloop.Mana++;
@@ -47,6 +52,7 @@ public class PlayerHealthandSave : MonoBehaviour {
 		if(gameloop.Health<gameloop.mHealth)
 			gameloop.Health++;
 	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
     {
 		if(collision.gameObject.tag == "EnemyAttack")
@@ -87,14 +93,15 @@ public class PlayerHealthandSave : MonoBehaviour {
 
     public void TakeDamage(int _damage)
     {
+        soundManager.playRandomFrom(soundManager.wizardHits);
         StartCoroutine("FlashRed");
         gameloop.Health = gameloop.Health - _damage;
         player.anim.SetTrigger("Hit");
-
     }
 
     public void Die()
     {
+        soundManager.playRandomFrom(soundManager.wizardHits);
         player.canMove = false;
         player.canCastSpell = false;
         player.anim.SetTrigger("Die");

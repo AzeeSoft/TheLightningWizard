@@ -41,6 +41,7 @@ public class Soldier : MonoBehaviour
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
 
+    SoundManager soundManager;
    
 
     /// <summary>
@@ -55,6 +56,7 @@ public class Soldier : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
 
         bulletSpawnerTransform = gameObject.transform.Find(bulletSpawnerName);
+        soundManager = GameObject.Find("SM").GetComponent<SoundManager>();
     }
 
 	// Use this for initialization
@@ -66,8 +68,9 @@ public class Soldier : MonoBehaviour
 	    if (isAlberto)
 	    {
 	        navMeshAgent.speed = navMeshAgent.speed*1.02f;
+	        StartCoroutine(playImTheOne());
 	    }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -116,6 +119,15 @@ public class Soldier : MonoBehaviour
             {
                 anim.SetBool("isAlberto", true);
             }
+        }
+    }
+
+    IEnumerator playImTheOne()
+    {
+        while (!isDead)
+        {
+            yield return new WaitForSeconds(3f);
+            soundManager.play(soundManager.albertoImTheOne);
         }
     }
 
