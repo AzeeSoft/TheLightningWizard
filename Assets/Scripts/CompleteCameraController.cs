@@ -12,6 +12,8 @@ public class CompleteCameraController : MonoBehaviour
 
     private Vector3 offset;       //Private variable to store the offset distance between the player and camera
 
+    private ArrayList affectedGameObjects;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,23 @@ public class CompleteCameraController : MonoBehaviour
     {
             yield return new WaitForSeconds(.5f);
             findPlayer();
+    }
+
+    void Update()
+    {
+        if (player != null)
+        {
+            float distFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+            RaycastHit[] raycastHits = Physics.RaycastAll(transform.position, (player.transform.position - transform.position).normalized, distFromPlayer);
+            foreach (RaycastHit raycastHit in raycastHits)
+            {
+                if (!raycastHit.collider.gameObject.CompareTag(Tags.Player))
+                {
+                    
+                }
+            }
+        }
     }
 
     // LateUpdate is called after Update each frame
