@@ -12276,8 +12276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldiers: []
   currentState: 0
-  readyToAttackRange: 15
-  attackRange: 20
+  readyToAttackRange: 4
+  attackRange: 5
 --- !u!1 &625591669
 GameObject:
   m_ObjectHideFlags: 0
