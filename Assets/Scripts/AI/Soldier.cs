@@ -62,6 +62,11 @@ public class Soldier : MonoBehaviour
         setState(State.Idle);
 
         anim = GetComponentInChildren<Animator>();
+
+	    if (isAlberto)
+	    {
+	        navMeshAgent.speed = navMeshAgent.speed*1.02f;
+	    }
 	}
 	
 	// Update is called once per frame
@@ -87,11 +92,6 @@ public class Soldier : MonoBehaviour
                 getLost();
                 break;
 	    }
-
-        if (Input.GetKey(KeyCode.U))
-        {
-            Die();
-        }
         
 	}
 
@@ -156,17 +156,25 @@ public class Soldier : MonoBehaviour
         {
             return;
         }
-        comeToAStop();
 
-        targetPos.y = transform.position.y;
-        transform.LookAt(targetPos);
+        if (isAlberto)
+        {
+            moveTowards(targetPos);
+        }
+        else
+        {
+            comeToAStop();
+
+            targetPos.y = transform.position.y;
+            transform.LookAt(targetPos);
 
 //        Debug.Log("Now: " + Time.time);
 //        Debug.Log("Last: " + lastAttackTime);
 
-        if (Time.time - lastAttackTime > attackWaitTime && !isDead)
-        {
-            shoot(targetPos);
+            if (Time.time - lastAttackTime > attackWaitTime && !isDead)
+            {
+                shoot(targetPos);
+            }
         }
     }
 
@@ -203,8 +211,5 @@ public class Soldier : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         Destroy(this.gameObject);
-      
     }
-
-
 }
