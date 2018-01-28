@@ -96,8 +96,17 @@ public class PlayerController : MonoBehaviour {
 
 	void lightningBall()
 	{
+        StartCoroutine("LightningDelay");
 		Instantiate(LBall, transform.position, transform.rotation);
 	}
+
+    IEnumerator LightningDelay()
+    {
+        canMove = false;
+        anim.SetTrigger("LightningBall");
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+    }
 
 
 }
