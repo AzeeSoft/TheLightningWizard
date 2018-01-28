@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/Eric/LevelOne.unity
     guid: 8a620ef46e767448389f2d392c924585
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Eric/LevelTwo.unity
+    guid: ad037089863d5466a90f0791b16621ac
