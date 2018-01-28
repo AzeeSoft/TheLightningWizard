@@ -19,8 +19,8 @@ public class Unit : MonoBehaviour
 
     public Vector3? lastSeenPlayerLocation = null;
 
-    public float readyToAttackRange = 5f;
-    public float attackRange = 8f;
+    public float readyToAttackRange = 15f;
+    public float attackRange = 20f;
 
     void Awake()
     {
