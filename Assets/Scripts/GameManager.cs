@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
     //Array of Enemy Spawners
     public GameObject[] eSpawners;
 
+	public AIManager AI;
+
     //Inventory
     public Text curLevelText;
     public Text PlayerLevelText;
@@ -158,6 +160,7 @@ public class GameManager : MonoBehaviour {
             Instantiate(Enemy, respawn.transform.position, respawn.transform.rotation);
             numOfEnemies = numOfEnemies + 3;
         }
+		AI.autoFetchAIUnits ();
     }
     //Spawning in Player;
     void spawnPlayer()
