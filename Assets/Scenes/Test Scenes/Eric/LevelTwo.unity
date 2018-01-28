@@ -1361,6 +1361,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 544630704}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &544630707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1770004667072076, guid: 7d240f848fd584c79ae5c0981afa8375,
+    type: 2}
+  m_PrefabInternal: {fileID: 544630704}
 --- !u!1001 &575281523
 Prefab:
   m_ObjectHideFlags: 0
@@ -2248,6 +2253,11 @@ Prefab:
       propertyPath: magicBar
       value: 
       objectReference: {fileID: 544630705}
+    - target: {fileID: 114839635792014518, guid: ef135b5eb3e5640b98821014281bf716,
+        type: 2}
+      propertyPath: gameover
+      value: 
+      objectReference: {fileID: 544630707}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef135b5eb3e5640b98821014281bf716, type: 2}
   m_IsPrefabParent: 0
