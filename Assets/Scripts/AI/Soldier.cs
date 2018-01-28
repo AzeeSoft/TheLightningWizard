@@ -75,7 +75,7 @@ public class Soldier : MonoBehaviour
 	            break;
 
             case State.Attacking:
-                if (parentUnit.lastSeenPlayerLocation != null && !isDead)
+                if (parentUnit != null && parentUnit.lastSeenPlayerLocation != null && !isDead)
                     attackTowards(parentUnit.lastSeenPlayerLocation.Value);
                 break;
 
@@ -84,12 +84,6 @@ public class Soldier : MonoBehaviour
                 getLost();
                 break;
 	    }
-
-        if (Input.GetKey(KeyCode.U))
-        {
-            Die();
-        }
-        
 	}
 
     void LateUpdate()

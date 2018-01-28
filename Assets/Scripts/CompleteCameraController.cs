@@ -5,6 +5,8 @@ using System.Collections;
 public class CompleteCameraController : MonoBehaviour
 {
     public float lerpFactor = 4f;
+    public float backingFactor = 4f;
+    public float loweringFactor = 4f;
 
     //public bool playerDead = false;
     public GameObject player = null;       //Public variable to store a reference to the player game object
@@ -12,6 +14,7 @@ public class CompleteCameraController : MonoBehaviour
     public Material translucentMaterial;
 
     private Vector3 offset;       //Private variable to store the offset distance between the player and camera
+    private float originalXRotation;
 
     private ArrayList affectedRenderers = new ArrayList();
     private ArrayList originalMaterials = new ArrayList();
@@ -21,6 +24,7 @@ public class CompleteCameraController : MonoBehaviour
     {
         StartCoroutine(MyCoroutine());
 		gameloop = GameObject.Find("GM").GetComponent <GameManager > ();
+
     }
 
     IEnumerator MyCoroutine()
@@ -31,7 +35,7 @@ public class CompleteCameraController : MonoBehaviour
 
     void Update()
     {
-        smartView();
+
     }
 
     // LateUpdate is called after Update each frame
@@ -45,7 +49,21 @@ public class CompleteCameraController : MonoBehaviour
             cameraPos = player.transform.position + offset;
             cameraPos.y = player.transform.position.y + offset.y;
             cameraPos.x = player.transform.position.x + offset.x/2;
+
+            CharacterController playerCharacterController = player.GetComponent<CharacterController>();
+            if (playerCharacterController.velocity.z < 0)
+            {
+                Vector3 additionalVector = (cameraPos - player.transform.position).normalized * backingFactor;
+                additionalVector.x = 0;
+
+                cameraPos += additionalVector;
+            } else if (playerCharacterController.velocity.z > 0)
+            {
+                cameraPos.y -= loweringFactor;
+            }
+
 			transform.localPosition = Vector3.Lerp (transform.localPosition, cameraPos, Time.deltaTime * lerpFactor);
+            transform.LookAt(player.transform);
         }
 
         if (gameloop.playerIsDead==true)
@@ -96,7 +114,10 @@ public class CompleteCameraController : MonoBehaviour
         for (int i = 0; i < affectedRenderers.Count; i++)
         {
             Renderer affectedRenderer = (Renderer)affectedRenderers[i];
-            affectedRenderer.material = (Material)originalMaterials[i];
+            if (affectedRenderer != null)
+            {
+                affectedRenderer.material = (Material) originalMaterials[i];
+            }
         }
 
         affectedRenderers.Clear();

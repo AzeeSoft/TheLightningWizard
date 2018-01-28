@@ -93,8 +93,11 @@ public class Unit : MonoBehaviour
         {
             foreach (Soldier soldier in soldiers)
             {
-                float dist = Vector3.Distance(soldier.transform.position, lastSeenPlayerLocation.Value);
-                minDistance = Mathf.Min(minDistance, dist);
+                if (soldier != null)
+                {
+                    float dist = Vector3.Distance(soldier.transform.position, lastSeenPlayerLocation.Value);
+                    minDistance = Mathf.Min(minDistance, dist);
+                }
             }
         }
 
