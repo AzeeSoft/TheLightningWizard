@@ -676,6 +676,11 @@ Prefab:
       propertyPath: gameloop
       value: 
       objectReference: {fileID: 548960268}
+    - target: {fileID: 114235047763796268, guid: 74ee8da994c74da4abb3915e8e7e2f5a,
+        type: 2}
+      propertyPath: maxHP
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74ee8da994c74da4abb3915e8e7e2f5a, type: 2}
   m_IsPrefabParent: 0
@@ -1128,3 +1133,4 @@ MonoBehaviour:
   lerpFactor: 4
   player: {fileID: 0}
   gameloop: {fileID: 0}
+  translucentMaterial: {fileID: 0}
