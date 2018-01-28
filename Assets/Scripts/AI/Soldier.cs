@@ -171,8 +171,7 @@ public class Soldier : MonoBehaviour
 
         if (isAlberto)
         {
-			//moveTowards(targetPos);
-			comeToAStop();
+            moveTowards(targetPos);
         }
         else
         {
