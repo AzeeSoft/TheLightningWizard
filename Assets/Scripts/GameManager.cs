@@ -58,11 +58,11 @@ public class GameManager : MonoBehaviour {
     private const string FILE_NAME = "Save.dat";
     void Start () {
         //Find All Spawners in level
-		Load();
+		//Load();
         //Save();
         AutoFindSpawns();
         SpawnEnemy();
-        spawnPlayer();
+        //spawnPlayer();
         //spawnPlayer();
       
 
@@ -147,8 +147,8 @@ public class GameManager : MonoBehaviour {
     void AutoFindSpawns()
     {
         eSpawners = GameObject.FindGameObjectsWithTag("Spawners");
-        pSpawner = GameObject.FindGameObjectWithTag("playerSpawner");
-        pExit = GameObject.FindGameObjectWithTag("playerExit");
+        //pSpawner = GameObject.FindGameObjectWithTag("playerSpawner");
+        //pExit = GameObject.FindGameObjectWithTag("playerExit");
     }
     //spawnEnemys it takes the level and give the enemies random stats based on the level number
     void SpawnEnemy()
