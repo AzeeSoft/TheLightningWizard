@@ -1,0 +1,461 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+guid: e40ae99a8eb9245ec9b462dcb3d4dd16
+timeCreated: 1517075662
+=======
+guid: 5fa0c6a1c7de541329f983a052de212c
+timeCreated: 1517075650
+>>>>>>> Stashed changes
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: arch
+    100002: arch 1
+    100004: arch 2
+    100006: arch1
+    100008: arch3
+    100010: archgatepole
+    100012: archgatepole1
+    100014: archgatepole2
+    100016: archgatepole3
+    100018: archgatepole4
+    100020: archgatepole5
+    100022: archgatepole6
+    100024: archstone
+    100026: archstone 1
+    100028: archstone1
+    100030: archstone1 1
+    100032: archwpoles
+    100034: big_rock
+    100036: big_rock1
+    100038: big_rock1 1
+    100040: big_rock1 2
+    100042: big_rock2
+    100044: big_rock3
+    100046: big_rock4
+    100048: bigrockformation
+    100050: meduimrock
+    100052: meduimrock1
+    100054: meduimrock1 1
+    100056: rockcluster
+    100058: rockformation
+    100060: rockformation3
+    100062: rockformation4
+    100064: samllrockclumps2
+    100066: samllrockclumps3
+    100068: samllrockclumps4
+    100070: small_rock
+    100072: small_rock1
+    100074: small_rock1 1
+    100076: small_rock2
+    100078: small_rock2 1
+    100080: small_rock2 2
+    100082: small_rock3
+    100084: small_rock3 1
+    100086: small_rock3 2
+    100088: smallarchstone
+    100090: smallarchstone1
+    100092: smallwallstone2
+    100094: smallwallstone2 1
+    100096: smallwallstone2 2
+    100098: smallwallstone2 3
+    100100: smallwallstone3
+    100102: smallwallstone3 1
+    100104: smallwallstone3 2
+    100106: smallwallstone3 3
+    100108: smallwallstone4
+    100110: smallwallstone4 1
+    100112: smallwallstone4 2
+    100114: smallwallstone4 3
+    100116: smallwallstone5
+    100118: smallwallstone6
+    100120: smallwallstone7
+    100122: smallwallstone8
+    100124: wall
+    100126: wall1
+    100128: wall2
+    100130: wall3
+    100132: wallandstones
+    100134: wallandstones1
+    100136: wallandstones2
+    100138: wallandstones3
+    100140: //RootNode
+    100142: wallstone1
+    100144: wallstone1 1
+    100146: wallstone1 2
+    100148: wallstone1 3
+    100150: wallstone2
+    100152: wallstone2 1
+    100154: wallstone2 2
+    100156: wallstone2 3
+    100158: wallstone3
+    100160: wallstone3 1
+    100162: wallstone3 2
+    100164: wallstone3 3
+    400000: arch
+    400002: arch 1
+    400004: arch 2
+    400006: arch1
+    400008: arch3
+    400010: archgatepole
+    400012: archgatepole1
+    400014: archgatepole2
+    400016: archgatepole3
+    400018: archgatepole4
+    400020: archgatepole5
+    400022: archgatepole6
+    400024: archstone
+    400026: archstone 1
+    400028: archstone1
+    400030: archstone1 1
+    400032: archwpoles
+    400034: big_rock
+    400036: big_rock1
+    400038: big_rock1 1
+    400040: big_rock1 2
+    400042: big_rock2
+    400044: big_rock3
+    400046: big_rock4
+    400048: bigrockformation
+    400050: meduimrock
+    400052: meduimrock1
+    400054: meduimrock1 1
+    400056: rockcluster
+    400058: rockformation
+    400060: rockformation3
+    400062: rockformation4
+    400064: samllrockclumps2
+    400066: samllrockclumps3
+    400068: samllrockclumps4
+    400070: small_rock
+    400072: small_rock1
+    400074: small_rock1 1
+    400076: small_rock2
+    400078: small_rock2 1
+    400080: small_rock2 2
+    400082: small_rock3
+    400084: small_rock3 1
+    400086: small_rock3 2
+    400088: smallarchstone
+    400090: smallarchstone1
+    400092: smallwallstone2
+    400094: smallwallstone2 1
+    400096: smallwallstone2 2
+    400098: smallwallstone2 3
+    400100: smallwallstone3
+    400102: smallwallstone3 1
+    400104: smallwallstone3 2
+    400106: smallwallstone3 3
+    400108: smallwallstone4
+    400110: smallwallstone4 1
+    400112: smallwallstone4 2
+    400114: smallwallstone4 3
+    400116: smallwallstone5
+    400118: smallwallstone6
+    400120: smallwallstone7
+    400122: smallwallstone8
+    400124: wall
+    400126: wall1
+    400128: wall2
+    400130: wall3
+    400132: wallandstones
+    400134: wallandstones1
+    400136: wallandstones2
+    400138: wallandstones3
+    400140: //RootNode
+    400142: wallstone1
+    400144: wallstone1 1
+    400146: wallstone1 2
+    400148: wallstone1 3
+    400150: wallstone2
+    400152: wallstone2 1
+    400154: wallstone2 2
+    400156: wallstone2 3
+    400158: wallstone3
+    400160: wallstone3 1
+    400162: wallstone3 2
+    400164: wallstone3 3
+    2100000: lambert1
+    2300000: arch 1
+    2300002: arch 2
+    2300004: arch3
+    2300006: archgatepole
+    2300008: archgatepole1
+    2300010: archgatepole2
+    2300012: archgatepole3
+    2300014: archgatepole4
+    2300016: archgatepole5
+    2300018: archgatepole6
+    2300020: archstone
+    2300022: archstone 1
+    2300024: archstone1
+    2300026: archstone1 1
+    2300028: big_rock
+    2300030: big_rock1
+    2300032: big_rock1 1
+    2300034: big_rock1 2
+    2300036: big_rock2
+    2300038: big_rock3
+    2300040: big_rock4
+    2300042: meduimrock
+    2300044: meduimrock1
+    2300046: meduimrock1 1
+    2300048: small_rock
+    2300050: small_rock1
+    2300052: small_rock1 1
+    2300054: small_rock2
+    2300056: small_rock2 1
+    2300058: small_rock2 2
+    2300060: small_rock3
+    2300062: small_rock3 1
+    2300064: small_rock3 2
+    2300066: smallarchstone
+    2300068: smallarchstone1
+    2300070: smallwallstone2
+    2300072: smallwallstone2 1
+    2300074: smallwallstone2 2
+    2300076: smallwallstone2 3
+    2300078: smallwallstone3
+    2300080: smallwallstone3 1
+    2300082: smallwallstone3 2
+    2300084: smallwallstone3 3
+    2300086: smallwallstone4
+    2300088: smallwallstone4 1
+    2300090: smallwallstone4 2
+    2300092: smallwallstone4 3
+    2300094: smallwallstone5
+    2300096: smallwallstone6
+    2300098: smallwallstone7
+    2300100: smallwallstone8
+    2300102: wall
+    2300104: wall1
+    2300106: wall2
+    2300108: wall3
+    2300110: wallstone1
+    2300112: wallstone1 1
+    2300114: wallstone1 2
+    2300116: wallstone1 3
+    2300118: wallstone2
+    2300120: wallstone2 1
+    2300122: wallstone2 2
+    2300124: wallstone2 3
+    2300126: wallstone3
+    2300128: wallstone3 1
+    2300130: wallstone3 2
+    2300132: wallstone3 3
+    3300000: arch 1
+    3300002: arch 2
+    3300004: arch3
+    3300006: archgatepole
+    3300008: archgatepole1
+    3300010: archgatepole2
+    3300012: archgatepole3
+    3300014: archgatepole4
+    3300016: archgatepole5
+    3300018: archgatepole6
+    3300020: archstone
+    3300022: archstone 1
+    3300024: archstone1
+    3300026: archstone1 1
+    3300028: big_rock
+    3300030: big_rock1
+    3300032: big_rock1 1
+    3300034: big_rock1 2
+    3300036: big_rock2
+    3300038: big_rock3
+    3300040: big_rock4
+    3300042: meduimrock
+    3300044: meduimrock1
+    3300046: meduimrock1 1
+    3300048: small_rock
+    3300050: small_rock1
+    3300052: small_rock1 1
+    3300054: small_rock2
+    3300056: small_rock2 1
+    3300058: small_rock2 2
+    3300060: small_rock3
+    3300062: small_rock3 1
+    3300064: small_rock3 2
+    3300066: smallarchstone
+    3300068: smallarchstone1
+    3300070: smallwallstone2
+    3300072: smallwallstone2 1
+    3300074: smallwallstone2 2
+    3300076: smallwallstone2 3
+    3300078: smallwallstone3
+    3300080: smallwallstone3 1
+    3300082: smallwallstone3 2
+    3300084: smallwallstone3 3
+    3300086: smallwallstone4
+    3300088: smallwallstone4 1
+    3300090: smallwallstone4 2
+    3300092: smallwallstone4 3
+    3300094: smallwallstone5
+    3300096: smallwallstone6
+    3300098: smallwallstone7
+    3300100: smallwallstone8
+    3300102: wall
+    3300104: wall1
+    3300106: wall2
+    3300108: wall3
+    3300110: wallstone1
+    3300112: wallstone1 1
+    3300114: wallstone1 2
+    3300116: wallstone1 3
+    3300118: wallstone2
+    3300120: wallstone2 1
+    3300122: wallstone2 2
+    3300124: wallstone2 3
+    3300126: wallstone3
+    3300128: wallstone3 1
+    3300130: wallstone3 2
+    3300132: wallstone3 3
+    4300000: wallstone2
+    4300002: wallstone1
+    4300004: smallwallstone3
+    4300006: smallwallstone2
+    4300008: smallwallstone4
+    4300010: wallstone3
+    4300012: wall3
+    4300014: arch3
+    4300016: archgatepole1
+    4300018: archgatepole2
+    4300020: archgatepole3
+    4300022: archgatepole4
+    4300024: archgatepole5
+    4300026: archgatepole6
+    4300028: archgatepole
+    4300030: wallstone2
+    4300032: wallstone1
+    4300034: smallwallstone3
+    4300036: smallwallstone2
+    4300038: smallwallstone4
+    4300040: wallstone3
+    4300042: wall2
+    4300044: arch
+    4300046: archstone1
+    4300048: archstone
+    4300050: smallarchstone1
+    4300052: big_rock1
+    4300054: small_rock1
+    4300056: meduimrock1
+    4300058: small_rock2
+    4300060: small_rock3
+    4300062: small_rock2
+    4300064: small_rock3
+    4300066: small_rock2
+    4300068: small_rock3
+    4300070: big_rock1
+    4300072: small_rock1
+    4300074: meduimrock1
+    4300076: big_rock3
+    4300078: big_rock4
+    4300080: big_rock2
+    4300082: wallstone2
+    4300084: wallstone1
+    4300086: smallwallstone3
+    4300088: smallwallstone2
+    4300090: wall1
+    4300092: smallwallstone4
+    4300094: wallstone3
+    4300096: big_rock1
+    4300098: meduimrock
+    4300100: small_rock
+    4300102: big_rock
+    4300104: arch
+    4300106: archstone1
+    4300108: smallarchstone
+    4300110: archstone
+    4300112: wall
+    4300114: wallstone2
+    4300116: wallstone1
+    4300118: smallwallstone3
+    4300120: smallwallstone2
+    4300122: smallwallstone4
+    4300124: wallstone3
+    4300126: smallwallstone5
+    4300128: smallwallstone6
+    4300130: smallwallstone7
+    4300132: smallwallstone8
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

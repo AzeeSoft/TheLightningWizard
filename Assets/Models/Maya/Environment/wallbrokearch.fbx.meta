@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: bb7534b4990cfdb49a9723afa8c3269c
+timeCreated: 1517087511
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: arch
+    100002: arch1
+    100004: archstone
+    100006: archstone1
+    100008: big_rock1
+    100010: big_rock1 1
+    100012: big_rock2
+    100014: big_rock3
+    100016: big_rock4
+    100018: bigrockformation
+    100020: meduimrock1
+    100022: meduimrock1 1
+    100024: rockcluster
+    100026: rockformation3
+    100028: rockformation4
+    100030: samllrockclumps2
+    100032: samllrockclumps3
+    100034: samllrockclumps4
+    100036: small_rock1
+    100038: small_rock1 1
+    100040: small_rock2
+    100042: small_rock2 1
+    100044: small_rock2 2
+    100046: small_rock3
+    100048: small_rock3 1
+    100050: small_rock3 2
+    100052: smallarchstone1
+    100054: smallwallstone2
+    100056: smallwallstone3
+    100058: smallwallstone4
+    100060: transform39
+    100062: transform40
+    100064: transform41
+    100066: transform42
+    100068: transform43
+    100070: transform44
+    100072: transform45
+    100074: transform46
+    100076: transform47
+    100078: transform48
+    100080: transform49
+    100082: transform50
+    100084: transform51
+    100086: transform52
+    100088: transform53
+    100090: transform54
+    100092: transform55
+    100094: transform56
+    100096: transform57
+    100098: transform58
+    100100: transform59
+    100102: transform60
+    100104: transform61
+    100106: transform62
+    100108: transform63
+    100110: transform64
+    100112: wall4
+    100114: wallandstones6
+    100116: wallandstones6 1
+    100118: //RootNode
+    100120: walls
+    100122: wallstone1
+    100124: wallstone2
+    100126: wallstone3
+    400000: arch
+    400002: arch1
+    400004: archstone
+    400006: archstone1
+    400008: big_rock1
+    400010: big_rock1 1
+    400012: big_rock2
+    400014: big_rock3
+    400016: big_rock4
+    400018: bigrockformation
+    400020: meduimrock1
+    400022: meduimrock1 1
+    400024: rockcluster
+    400026: rockformation3
+    400028: rockformation4
+    400030: samllrockclumps2
+    400032: samllrockclumps3
+    400034: samllrockclumps4
+    400036: small_rock1
+    400038: small_rock1 1
+    400040: small_rock2
+    400042: small_rock2 1
+    400044: small_rock2 2
+    400046: small_rock3
+    400048: small_rock3 1
+    400050: small_rock3 2
+    400052: smallarchstone1
+    400054: smallwallstone2
+    400056: smallwallstone3
+    400058: smallwallstone4
+    400060: transform39
+    400062: transform40
+    400064: transform41
+    400066: transform42
+    400068: transform43
+    400070: transform44
+    400072: transform45
+    400074: transform46
+    400076: transform47
+    400078: transform48
+    400080: transform49
+    400082: transform50
+    400084: transform51
+    400086: transform52
+    400088: transform53
+    400090: transform54
+    400092: transform55
+    400094: transform56
+    400096: transform57
+    400098: transform58
+    400100: transform59
+    400102: transform60
+    400104: transform61
+    400106: transform62
+    400108: transform63
+    400110: transform64
+    400112: wall4
+    400114: wallandstones6
+    400116: wallandstones6 1
+    400118: //RootNode
+    400120: walls
+    400122: wallstone1
+    400124: wallstone2
+    400126: wallstone3
+    2100000: lambert1
+    2300000: wallandstones6
+    3300000: wallandstones6
+    4300000: wallandstones6
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+guid: c951a8df7ef5e3f44bf8295bf085eb19
+folderAsset: yes
+timeCreated: 1517022997
+=======
+guid: 91b5d4697af8b497687cd62cd584e03d
+folderAsset: yes
+timeCreated: 1517028908
+>>>>>>> 253aed427ee6d6cadeecac67da4a95713a3712ec
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+=======
+guid: c951a8df7ef5e3f44bf8295bf085eb19
+folderAsset: yes
+timeCreated: 1517022997
+licenseType: Free
+DefaultImporter:
+>>>>>>> Stashed changes
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

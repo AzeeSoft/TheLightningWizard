@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 0fda75c63af421f4bbdd48d1204bc6d3
+timeCreated: 1517087509
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: arch3
+    100002: archgatepole
+    100004: archgatepole1
+    100006: archgatepole2
+    100008: archgatepole3
+    100010: archgatepole4
+    100012: archgatepole5
+    100014: archgatepole6
+    100016: archwpoles
+    100018: smallwallstone2
+    100020: smallwallstone3
+    100022: smallwallstone4
+    100024: transform65
+    100026: transform66
+    100028: transform67
+    100030: transform68
+    100032: transform69
+    100034: transform70
+    100036: transform71
+    100038: transform72
+    100040: transform73
+    100042: transform74
+    100044: transform75
+    100046: transform76
+    100048: transform77
+    100050: transform78
+    100052: transform79
+    100054: wall3
+    100056: wallandstones7
+    100058: wallandstones7 1
+    100060: //RootNode
+    100062: walls
+    100064: wallstone1
+    100066: wallstone2
+    100068: wallstone3
+    400000: arch3
+    400002: archgatepole
+    400004: archgatepole1
+    400006: archgatepole2
+    400008: archgatepole3
+    400010: archgatepole4
+    400012: archgatepole5
+    400014: archgatepole6
+    400016: archwpoles
+    400018: smallwallstone2
+    400020: smallwallstone3
+    400022: smallwallstone4
+    400024: transform65
+    400026: transform66
+    400028: transform67
+    400030: transform68
+    400032: transform69
+    400034: transform70
+    400036: transform71
+    400038: transform72
+    400040: transform73
+    400042: transform74
+    400044: transform75
+    400046: transform76
+    400048: transform77
+    400050: transform78
+    400052: transform79
+    400054: wall3
+    400056: wallandstones7
+    400058: wallandstones7 1
+    400060: //RootNode
+    400062: walls
+    400064: wallstone1
+    400066: wallstone2
+    400068: wallstone3
+    2100000: lambert1
+    2300000: wallandstones7
+    3300000: wallandstones7
+    4300000: wallandstones7
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: d5006e0650d2f46bca80c8e4128ec7f2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: cratebox
+    100004: crateside
+    100006: crateside1
+    100008: crateside2
+    100010: crateside3
+    100012: cratewood1
+    100014: cratewood1 1
+    100016: cratewood1 2
+    100018: cratewood1 3
+    100020: cratewood1 4
+    100022: cratewood3
+    100024: cratewood3 1
+    100026: cratewood3 2
+    100028: cratewood3 3
+    100030: cratewood3 4
+    100032: cratewood4
+    100034: cratewood4 1
+    100036: cratewood4 2
+    100038: cratewood4 3
+    100040: cratewood4 4
+    100042: cratewood5
+    100044: cratewood5 1
+    100046: cratewood5 2
+    100048: cratewood5 3
+    100050: cratewood5 4
+    100052: creatwood1
+    100054: creatwood1 1
+    100056: creatwood1 2
+    100058: creatwood1 3
+    100060: creatwood1 4
+    100062: groupcrateside2
+    400000: //RootNode
+    400002: cratebox
+    400004: crateside
+    400006: crateside1
+    400008: crateside2
+    400010: crateside3
+    400012: cratewood1
+    400014: cratewood1 1
+    400016: cratewood1 2
+    400018: cratewood1 3
+    400020: cratewood1 4
+    400022: cratewood3
+    400024: cratewood3 1
+    400026: cratewood3 2
+    400028: cratewood3 3
+    400030: cratewood3 4
+    400032: cratewood4
+    400034: cratewood4 1
+    400036: cratewood4 2
+    400038: cratewood4 3
+    400040: cratewood4 4
+    400042: cratewood5
+    400044: cratewood5 1
+    400046: cratewood5 2
+    400048: cratewood5 3
+    400050: cratewood5 4
+    400052: creatwood1
+    400054: creatwood1 1
+    400056: creatwood1 2
+    400058: creatwood1 3
+    400060: creatwood1 4
+    400062: groupcrateside2
+    2100000: lambert1
+    2300000: cratebox
+    2300002: cratewood1
+    2300004: cratewood1 1
+    2300006: cratewood1 2
+    2300008: cratewood1 3
+    2300010: cratewood1 4
+    2300012: cratewood3
+    2300014: cratewood3 1
+    2300016: cratewood3 2
+    2300018: cratewood3 3
+    2300020: cratewood3 4
+    2300022: cratewood4
+    2300024: cratewood4 1
+    2300026: cratewood4 2
+    2300028: cratewood4 3
+    2300030: cratewood4 4
+    2300032: cratewood5
+    2300034: cratewood5 1
+    2300036: cratewood5 2
+    2300038: cratewood5 3
+    2300040: cratewood5 4
+    2300042: creatwood1
+    2300044: creatwood1 1
+    2300046: creatwood1 2
+    2300048: creatwood1 3
+    2300050: creatwood1 4
+    3300000: cratebox
+    3300002: cratewood1
+    3300004: cratewood1 1
+    3300006: cratewood1 2
+    3300008: cratewood1 3
+    3300010: cratewood1 4
+    3300012: cratewood3
+    3300014: cratewood3 1
+    3300016: cratewood3 2
+    3300018: cratewood3 3
+    3300020: cratewood3 4
+    3300022: cratewood4
+    3300024: cratewood4 1
+    3300026: cratewood4 2
+    3300028: cratewood4 3
+    3300030: cratewood4 4
+    3300032: cratewood5
+    3300034: cratewood5 1
+    3300036: cratewood5 2
+    3300038: cratewood5 3
+    3300040: cratewood5 4
+    3300042: creatwood1
+    3300044: creatwood1 1
+    3300046: creatwood1 2
+    3300048: creatwood1 3
+    3300050: creatwood1 4
+    4300000: cratewood5
+    4300002: cratewood4
+    4300004: cratewood3
+    4300006: creatwood1
+    4300008: cratewood1
+    4300010: cratewood5
+    4300012: cratewood4
+    4300014: cratewood3
+    4300016: creatwood1
+    4300018: cratewood1
+    4300020: cratewood5
+    4300022: cratewood4
+    4300024: cratewood3
+    4300026: creatwood1
+    4300028: cratewood1
+    4300030: cratewood5
+    4300032: cratewood4
+    4300034: cratewood3
+    4300036: creatwood1
+    4300038: cratewood1
+    4300040: cratewood5
+    4300042: cratewood4
+    4300044: cratewood3
+    4300046: creatwood1
+    4300048: cratewood1
+    4300050: cratebox
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
