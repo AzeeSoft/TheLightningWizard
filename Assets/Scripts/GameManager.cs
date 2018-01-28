@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour {
             SpawnEnemy();
             print("SpawnEnemy");
         }
-        if (Health == 0)
+        if (Health <= 0)
         {
             gameover.SetActive(true);
             countdown();
