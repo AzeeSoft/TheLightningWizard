@@ -94,6 +94,8 @@ public class pauseMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("startMenu", LoadSceneMode.Single);//loads start menu
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+		Time.timeScale = 1;
+
     }
 
     public void GetVolume(float vol){
