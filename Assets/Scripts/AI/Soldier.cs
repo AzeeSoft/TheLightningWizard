@@ -36,6 +36,8 @@ public class Soldier : MonoBehaviour
     private bool isDead = false;
     public bool isAlberto = false;
 
+    public ParticleSystem muzzle;
+
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
 
@@ -174,6 +176,9 @@ public class Soldier : MonoBehaviour
         {
             return;
         }
+
+        muzzle.Play();
+
         anim.SetTrigger("Shoot");
         GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
         SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();

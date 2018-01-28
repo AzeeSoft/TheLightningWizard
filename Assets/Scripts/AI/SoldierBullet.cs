@@ -9,6 +9,9 @@ public class SoldierBullet : MonoBehaviour
     public float speed = 5;
     public int damage = 1;
 
+    public GameObject explosion;
+    public GameObject blood;
+
     Rigidbody rigidbody;
 
     Vector3 targetPos;
@@ -30,7 +33,8 @@ public class SoldierBullet : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         transform.LookAt(targetPos);
     }
 
@@ -49,8 +53,24 @@ public class SoldierBullet : MonoBehaviour
         if(collider.tag == "Player")
         {
             collider.GetComponent<PlayerHealthandSave>().TakeDamage(damage);
+            Instantiate(blood, transform.position, transform.rotation);
         }
 
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter(Collision _col)
+    {
+        if (projectileMotion && _col.gameObject.tag != "Enemy")
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+
+        if(_col.gameObject.tag != "Enemy")
+        {
+
+            Destroy(this.gameObject);
+        }
+    }
+       
 }
