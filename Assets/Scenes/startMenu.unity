@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -210,9 +210,90 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114452518845816864, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 285724249}
+    - target: {fileID: 114452518845816864, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114337782686498356, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 285724249}
+    - target: {fileID: 114337782686498356, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763615794128256, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 285724249}
+    - target: {fileID: 114763615794128256, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CreditsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388177494166484, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 285724249}
+    - target: {fileID: 114388177494166484, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508801214107160, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114114577432545714, guid: 1419797ff7f7f4bce8dd02ef1143d12f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1419797ff7f7f4bce8dd02ef1143d12f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &89575702 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1325299063714804, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575703 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1875557456675758, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575704 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1762591288893504, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575705 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1980575836941684, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575706 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1485349681297174, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1612758956082374, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
+--- !u!1 &89575708 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1356246850188846, guid: 1419797ff7f7f4bce8dd02ef1143d12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 89575701}
 --- !u!1 &230870185
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +370,7 @@ GameObject:
   - component: {fileID: 285724247}
   - component: {fileID: 285724246}
   - component: {fileID: 285724245}
+  - component: {fileID: 285724249}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -359,6 +441,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285724249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285724244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df981e4c766a045f7b918d164e6f2a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 1
+  pLevel: 0
+  nextLevel: 5
+  ex: 0
+  Speed: 1
+  Health: 10
+  mHealth: 10
+  Mana: 10
+  mMana: 10
+  Souls: 10
+  credits: {fileID: 89575708}
+  controls: {fileID: 89575707}
+  us: {fileID: 89575706}
+  splashGGJ: {fileID: 89575705}
+  splashD: {fileID: 89575704}
+  backg: {fileID: 89575703}
+  backbutton: {fileID: 89575702}
+  time: 400
 --- !u!1001 &619944462
 Prefab:
   m_ObjectHideFlags: 0

@@ -97,9 +97,10 @@ public class startScreen : MonoBehaviour
     
     public void Controls()
     {
+		controls.SetActive(true);
+		backbutton.SetActive(true);
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
-        controls.SetActive(true);
-        backbutton.SetActive(true);
+        
     }
     public void CreditsButton()
     {
