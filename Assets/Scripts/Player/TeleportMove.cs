@@ -21,7 +21,6 @@ public class TeleportMove : MonoBehaviour
 
     public ParticleSystem transmissionParticleSystem;
 
-    [HideInInspector]
     public State currentState = State.Idle;
 
     CharacterController characterController;
@@ -103,7 +102,9 @@ public class TeleportMove : MonoBehaviour
 	                if (currentDist < dabInterval)
 	                {
 	                    currentState = State.Dabbing;
-	                    oldScale = transform.localScale;
+
+                        if(transform.localScale != Vector3.zero)
+	                        oldScale = transform.localScale;
 	                }
 	                else if (currentDist >= dabInterval && currentDist < (totalDist - dabInterval))
 	                {

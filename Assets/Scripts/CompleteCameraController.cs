@@ -9,10 +9,12 @@ public class CompleteCameraController : MonoBehaviour
     //public bool playerDead = false;
     public GameObject player = null;       //Public variable to store a reference to the player game object
     public GameManager gameloop;
+    public Material translucentMaterial;
 
     private Vector3 offset;       //Private variable to store the offset distance between the player and camera
 
-    private ArrayList affectedGameObjects;
+    private ArrayList affectedRenderers = new ArrayList();
+    private ArrayList originalMaterials = new ArrayList();
 
     // Use this for initialization
     void Start()
@@ -29,24 +31,14 @@ public class CompleteCameraController : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
-        {
-            float distFromPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-            RaycastHit[] raycastHits = Physics.RaycastAll(transform.position, (player.transform.position - transform.position).normalized, distFromPlayer);
-            foreach (RaycastHit raycastHit in raycastHits)
-            {
-                if (!raycastHit.collider.gameObject.CompareTag(Tags.Player))
-                {
-                    
-                }
-            }
-        }
+        smartView();
     }
 
     // LateUpdate is called after Update each frame
     void FixedUpdate()
     {
+        smartView();
+
         if (player != null)
         {
             Vector3 cameraPos = transform.localPosition;
@@ -66,5 +58,48 @@ public class CompleteCameraController : MonoBehaviour
     private void findPlayer(){
         player = GameObject.FindGameObjectWithTag("Player");
         offset = transform.position - player.transform.position;
+    }
+
+    private void smartView()
+    {
+        undoSeeThroughRenderers();
+
+        if (player != null)
+        {
+            float distFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+            RaycastHit[] raycastHits = Physics.RaycastAll(transform.position, (player.transform.position - transform.position).normalized, distFromPlayer);
+            foreach (RaycastHit raycastHit in raycastHits)
+            {
+                if (!raycastHit.collider.gameObject.CompareTag(Tags.Player) && !raycastHit.collider.gameObject.CompareTag(Tags.Enemy))
+                {
+                    seeThroughGameObject(raycastHit.collider.gameObject);
+                }
+            }
+        }
+    }
+
+    private void seeThroughGameObject(GameObject targetGameObject)
+    {
+        Renderer[] renderers = targetGameObject.GetComponentsInChildren<Renderer>();
+        foreach (Renderer curRenderer in renderers)
+        {
+            affectedRenderers.Add(curRenderer);
+            originalMaterials.Add(curRenderer.material);
+
+            curRenderer.material = translucentMaterial;
+        }
+    }
+
+    private void undoSeeThroughRenderers()
+    {
+        for (int i = 0; i < affectedRenderers.Count; i++)
+        {
+            Renderer affectedRenderer = (Renderer)affectedRenderers[i];
+            affectedRenderer.material = (Material)originalMaterials[i];
+        }
+
+        affectedRenderers.Clear();
+        originalMaterials.Clear();
     }
 }

@@ -574,6 +574,22 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 8dfedfe0335f0b54b83ed5f3363fa500, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dfedfe0335f0b54b83ed5f3363fa500, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dfedfe0335f0b54b83ed5f3363fa500, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8dfedfe0335f0b54b83ed5f3363fa500, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dfedfe0335f0b54b83ed5f3363fa500, type: 3}
   m_IsPrefabParent: 0
@@ -677,6 +693,7 @@ MonoBehaviour:
   lerpFactor: 4
   player: {fileID: 0}
   gameloop: {fileID: 0}
+  translucentMaterial: {fileID: 2100000, guid: d2316eb0cb03b044387d90706d66b1ea, type: 2}
 --- !u!1001 &471334210
 Prefab:
   m_ObjectHideFlags: 0
