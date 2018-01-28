@@ -6,6 +6,7 @@ using System.IO;
 
 public class startScreen : MonoBehaviour
 {
+	
 	public int Level = 1;
 	public int pLevel = 0;
 	public int nextLevel = 5;
@@ -93,10 +94,7 @@ public class startScreen : MonoBehaviour
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
-    public void LoadButton()
-    {
-        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
-    }
+    
     public void Controls()
     {
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
