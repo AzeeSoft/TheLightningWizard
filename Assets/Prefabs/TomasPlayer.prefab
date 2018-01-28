@@ -1056,7 +1056,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888278684232642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 0.14, z: -45.43}
+  m_LocalPosition: {x: 0, y: 0.144, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358812310876916}
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   teleportSpeed: 0.7
   dabPercent: 10
   teleportRangeAjdusment: 1
+  teleportMaxTime: 0.5
   transmissionParticleSystem: {fileID: 198553786168733132}
   currentState: 0
 --- !u!114 &114905942797444658
@@ -1327,6 +1328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isThouching: 0
+  rend: {fileID: 137991500525801016}
+  HitColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!137 &137108208171987260
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

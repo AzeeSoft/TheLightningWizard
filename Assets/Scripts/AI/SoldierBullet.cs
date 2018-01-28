@@ -7,6 +7,7 @@ public class SoldierBullet : MonoBehaviour
     public bool projectileMotion = false;
     public float upwardForceFactor = 100;
     public float speed = 5;
+    public int damage = 1;
 
     Rigidbody rigidbody;
 
@@ -43,6 +44,11 @@ public class SoldierBullet : MonoBehaviour
         if (collider.gameObject.GetComponent<Soldier>() != null)
         {
             return;
+        }
+
+        if(collider.tag == "Player")
+        {
+            collider.GetComponent<PlayerHealthandSave>().TakeDamage(damage);
         }
 
         Destroy(gameObject);

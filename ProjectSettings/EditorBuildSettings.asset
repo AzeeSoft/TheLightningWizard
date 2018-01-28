@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: 8121151a772044f8595c83f72a668eda
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Tomas/PlayerTest.unity
+    guid: edbd3108a6310e34d9b4e9449f00ccbe

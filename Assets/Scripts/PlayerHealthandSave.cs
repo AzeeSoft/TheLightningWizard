@@ -13,6 +13,8 @@ public class PlayerHealthandSave : MonoBehaviour {
 
     private PlayerController player;
 
+    public SkinnedMeshRenderer rend;
+
     public Color HitColor;
 
 	void Start () {
@@ -101,7 +103,7 @@ public class PlayerHealthandSave : MonoBehaviour {
     IEnumerator FlashRed()
     {
         print("FLASH!");
-        Material[] mats = GetComponentInChildren<SkinnedMeshRenderer>().materials;
+        Material[] mats = rend.materials;
 
         foreach (Material mat in mats)
         {
@@ -118,6 +120,6 @@ public class PlayerHealthandSave : MonoBehaviour {
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("level", LoadSceneMode.Single);
+        SceneManager.LoadScene("PlayerTest", LoadSceneMode.Single);
     }
 }
