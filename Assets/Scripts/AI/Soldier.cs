@@ -33,6 +33,7 @@ public class Soldier : MonoBehaviour
 
     public Animator anim;
     private bool isDead = false;
+    public bool isAlberto = false;
 
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
@@ -93,11 +94,23 @@ public class Soldier : MonoBehaviour
     {
         if (navMeshAgent.velocity != Vector3.zero)
         {
-            anim.SetBool("isWalking", true);
+            if (isAlberto)
+            {
+                anim.SetBool("isAlberto", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", true);
+            }
+           
         }
         else
         {
             anim.SetBool("isWalking", false);
+            if (isAlberto)
+            {
+                anim.SetBool("isAlberto", true);
+            }
         }
     }
 
