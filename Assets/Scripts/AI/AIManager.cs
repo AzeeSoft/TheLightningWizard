@@ -26,4 +26,8 @@ public class AIManager : MonoBehaviour
 
     }
 
+    public void autoFetchAIUnits()
+    {
+        unitAiManager.autoFetchUnits();
+    }
 }
