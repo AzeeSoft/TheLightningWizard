@@ -72,5 +72,4 @@ public class SoldierBullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-       
 }

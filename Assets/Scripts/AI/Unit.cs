@@ -111,14 +111,18 @@ public class Unit : MonoBehaviour
         {
             foreach (Soldier soldier in soldiers)
             {
-                float distFromPlayer = Vector3.Distance(soldier.transform.position, lastSeenPlayerLocation.Value);
-                if (getUnitDistanceFromPlayerLastSeen() < readyToAttackRange && distFromPlayer < attackRange && canSoldierSeePlayer(soldier))
+                if (soldier != null)
                 {
-                    soldier.setState(Soldier.State.Attacking);
-                }
-                else
-                {
-                    soldier.setState(Soldier.State.Marching);
+                    float distFromPlayer = Vector3.Distance(soldier.transform.position, lastSeenPlayerLocation.Value);
+                    if (getUnitDistanceFromPlayerLastSeen() < readyToAttackRange && distFromPlayer < attackRange &&
+                        canSoldierSeePlayer(soldier))
+                    {
+                        soldier.setState(Soldier.State.Attacking);
+                    }
+                    else
+                    {
+                        soldier.setState(Soldier.State.Marching);
+                    }
                 }
             }
         }

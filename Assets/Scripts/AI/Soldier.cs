@@ -78,12 +78,12 @@ public class Soldier : MonoBehaviour
 	            break;
 
             case State.Marching:
-	            if (parentUnit.lastSeenPlayerLocation != null && !isDead)
+	            if (parentUnit != null && parentUnit.lastSeenPlayerLocation != null && !isDead)
                     moveTowards(parentUnit.lastSeenPlayerLocation.Value);
 	            break;
 
             case State.Attacking:
-                if (parentUnit.lastSeenPlayerLocation != null && !isDead)
+                if (parentUnit != null && parentUnit.lastSeenPlayerLocation != null && !isDead)
                     attackTowards(parentUnit.lastSeenPlayerLocation.Value);
                 break;
 
