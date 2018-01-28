@@ -41780,6 +41780,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 1342227813}
+    - target: {fileID: 114839635792014518, guid: ef135b5eb3e5640b98821014281bf716,
+        type: 2}
+      propertyPath: numOfEnemies
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef135b5eb3e5640b98821014281bf716, type: 2}
   m_IsPrefabParent: 0
