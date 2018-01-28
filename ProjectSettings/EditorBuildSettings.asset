@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/startMenu.unity
     guid: 2c3bcd606ffdd40228f53563279a25f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/level1.unity
     guid: 8121151a772044f8595c83f72a668eda
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/Tomas/PlayerTest.unity
     guid: edbd3108a6310e34d9b4e9449f00ccbe
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Eric/LevelOne.unity
+    guid: 8a620ef46e767448389f2d392c924585
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Eric/LevelTwo.unity
+    guid: ad037089863d5466a90f0791b16621ac
