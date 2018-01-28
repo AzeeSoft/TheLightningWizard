@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: d801fe149640447158013cfdb51d8b6d,
+  m_LightingDataAsset: {fileID: 112000002, guid: 5cada50cde9dc471cb51bec7d58d0876,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -113,7 +113,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 1ca2219c95e6f404ba4ffa716efb5af0, type: 2}
 --- !u!1 &9569359
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +876,34 @@ GameObject:
   m_PrefabParentObject: {fileID: 1769732232123382, guid: e6cd052b23ce74fa3a907c1101ea6fa9,
     type: 2}
   m_PrefabInternal: {fileID: 225106919}
+--- !u!1 &397257336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 397257337}
+  m_Layer: 0
+  m_Name: EnemySpawner (2)
+  m_TagString: Spawners
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397257337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397257336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.47, y: 0, z: -10.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &408868541
 Prefab:
   m_ObjectHideFlags: 0
@@ -2313,6 +2341,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4615448195882108, guid: c740e0634b5e44448968c9bd7f1020dc,
     type: 2}
   m_PrefabInternal: {fileID: 836236654}
+--- !u!1 &849365115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 849365116}
+  m_Layer: 0
+  m_Name: EnemySpawner (1)
+  m_TagString: Spawners
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849365116
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849365115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.36, y: 0, z: -1.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856259930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,17 +4319,37 @@ Prefab:
     - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
         type: 2}
       propertyPath: m_Range
-      value: 50
+      value: 55.99
       objectReference: {fileID: 0}
     - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
         type: 2}
       propertyPath: m_Type
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
+        type: 2}
+      propertyPath: m_AreaSize.x
+      value: 10.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
+        type: 2}
+      propertyPath: m_AreaSize.y
+      value: 14.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108526260872327502, guid: e9f04712be340445584aac8450a6321e,
+        type: 2}
+      propertyPath: m_BounceIntensity
+      value: 15.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f04712be340445584aac8450a6321e, type: 2}
@@ -4830,7 +4906,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118562102}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -46.12, y: 3.8, z: -46.13}
+  m_LocalPosition: {x: -22.65, y: 3.9, z: -20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
