@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHP: 0
-  maxHP: 50
+  maxHP: 100
   gameloop: {fileID: 0}
   mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
   health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
@@ -2611,6 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f799b710e24c248ac034588a8d692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitColor: {r: 0, g: 0, b: 0, a: 0}
   bulletPrefab: {fileID: 1106541552409474, guid: f8a4e40d2831229439b827dbc1344892,
     type: 2}
   attackWaitTime: 0.5

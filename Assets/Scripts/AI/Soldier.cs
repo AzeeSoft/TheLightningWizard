@@ -16,6 +16,8 @@ public class Soldier : MonoBehaviour
 
     private const string bulletSpawnerName = "bulletSpawner";
 
+    public Color HitColor;
+
     public GameObject bulletPrefab;
 
     /// <summary>
@@ -196,4 +198,5 @@ public class Soldier : MonoBehaviour
         Destroy(this.gameObject);
       
     }
+
 }
