@@ -25,6 +25,16 @@ public class UnitAIManager : MonoBehaviour
         }
     }
 
+    public void autoFetchUnits()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Unit");
+
+        units = new Unit[gameObjects.Length];
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            units[i] = gameObjects[i].GetComponent<Unit>();
+        }
+    }
 
     void computeState(Unit unit)
     {
