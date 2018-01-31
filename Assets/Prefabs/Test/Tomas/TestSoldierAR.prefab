@@ -2689,6 +2689,7 @@ MonoBehaviour:
   curHP: 0
   maxHP: 100
   gameloop: {fileID: 0}
+  soundManager: {fileID: 0}
   mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
   health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
   rends:
@@ -2723,7 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1106541552409474, guid: f8a4e40d2831229439b827dbc1344892,
     type: 2}
-  attackWaitTime: 1
+  attackWaitTime: 2.5
   bulletSpawnerTransform: {fileID: 0}
   anim: {fileID: 0}
   isAlberto: 0

@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1602667681613904, guid: 94ff54fb77bfea94cbd944da0eba6d00,
     type: 2}
-  attackWaitTime: 1.39
+  attackWaitTime: 5
   bulletSpawnerTransform: {fileID: 0}
   anim: {fileID: 0}
   isAlberto: 0
@@ -2112,6 +2112,7 @@ MonoBehaviour:
   curHP: 0
   maxHP: 200
   gameloop: {fileID: 0}
+  soundManager: {fileID: 0}
   mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
   health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
   rends:

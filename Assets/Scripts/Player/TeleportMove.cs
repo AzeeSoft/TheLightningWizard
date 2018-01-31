@@ -67,10 +67,9 @@ public class TeleportMove : MonoBehaviour
 
                 if (didHit)
                 {
-                    teleportDist = raycastHit.distance;
-                    if (raycastHit.collider.gameObject.CompareTag("Enemy"))
+                    if (!raycastHit.collider.gameObject.CompareTag("Enemy"))
                     {
-                        raycastHit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+                        teleportDist = raycastHit.distance;
                     }
                 }
 
