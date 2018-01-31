@@ -115,4 +115,8 @@ public class startScreen : MonoBehaviour
         backbutton.SetActive(false);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
