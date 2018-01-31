@@ -126,6 +126,6 @@ public class PlayerHealthandSave : MonoBehaviour {
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("PlayerTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("LevelOne", LoadSceneMode.Single);
     }
 }

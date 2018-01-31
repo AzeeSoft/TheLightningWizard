@@ -60,16 +60,15 @@ public class TeleportMove : MonoBehaviour
 	        if (playerController.canMove && Time.time - lastTeleportEndTime > teleportMinInterval)
 	        {
 	            Vector3 dir = transform.forward.normalized;
-	            RaycastHit raycastHit;
-	            bool didHit = Physics.Raycast(transform.position, dir, out raycastHit, teleportRange);
+	            RaycastHit[] raycastHits = Physics.RaycastAll(transform.position, dir, teleportRange);
 
 	            float teleportDist = teleportRange; 
 
-                if (didHit)
-                {
+                foreach(RaycastHit raycastHit in raycastHits)
+	            {
                     if (!raycastHit.collider.gameObject.CompareTag("Enemy"))
                     {
-                        teleportDist = raycastHit.distance;
+                        teleportDist = Mathf.Min(teleportDist, raycastHit.distance);
                     }
                 }
 

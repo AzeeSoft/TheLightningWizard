@@ -166,7 +166,10 @@ public class GameManager : MonoBehaviour {
             Instantiate(Enemy, respawn.transform.position, respawn.transform.rotation);
             numOfEnemies = numOfEnemies + 3;
         }
-		AI.autoFetchAIUnits ();
+        if (AI)
+        {
+            AI.autoFetchAIUnits();
+        }
     }
 
     //Spawning in Player;
