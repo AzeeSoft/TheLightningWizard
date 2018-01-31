@@ -126,7 +126,10 @@ public class TeleportMove : MonoBehaviour
                         graphicsGameObject.transform.localScale = oldScale;
 	                }
 
-	                characterController.Move((teleportTarget - graphicsGameObject.transform.position).normalized * teleportSpeed);
+	                Vector3 teleportVector = (teleportTarget - graphicsGameObject.transform.position).normalized*teleportSpeed;
+	                teleportVector = transform.InverseTransformDirection(teleportVector);
+
+                    characterController.transform.Translate(teleportVector);
                     Debug.Log((teleportTarget - graphicsGameObject.transform.position).normalized * teleportSpeed);
 	            }
 	        }
@@ -137,7 +140,7 @@ public class TeleportMove : MonoBehaviour
     void startTeleport(Vector3 endPos)
     {
         playerController.canMove = false;
-        characterController.detectCollisions = false;
+        characterController.enabled = false;
         GetComponent<BoxCollider>().enabled = true;
 
         currentState = State.Dabbing;
@@ -157,7 +160,7 @@ public class TeleportMove : MonoBehaviour
     {
         graphicsGameObject.transform.localScale = oldScale;
 
-        characterController.detectCollisions = true;
+        characterController.enabled = true;
         GetComponent<BoxCollider>().enabled = false;
 
         lastTeleportEndTime = Time.time;

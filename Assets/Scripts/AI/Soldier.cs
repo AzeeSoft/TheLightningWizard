@@ -212,8 +212,9 @@ public class Soldier : MonoBehaviour
         setUnit(null);
         navMeshAgent.enabled = false;
         soldierCharacterController.enabled = false;
+        soldierCharacterController.detectCollisions = false;
         bulletSpawnerTransform.gameObject.SetActive(false);
-        GetComponent<Collider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         setState(State.Dead);
         anim.SetTrigger("Die");
         StartCoroutine("Despawn");
