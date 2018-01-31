@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+
+    public GameObject cameraGameObject;
 
 	public GameObject LBall;
     public float moveSpeed = 5.0F;
@@ -20,8 +23,8 @@ public class PlayerController : MonoBehaviour {
     {
         player = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
+        cameraGameObject = GameObject.FindGameObjectWithTag("MainCamera");
         canMove = true;
-
     }
     void FixedUpdate()
     {
@@ -64,8 +67,6 @@ public class PlayerController : MonoBehaviour {
         movement = movement.normalized * moveSpeed;
 
         player.Move(movement * Time.deltaTime);
-
-
     }
     void Movement()
     {
@@ -78,12 +79,19 @@ public class PlayerController : MonoBehaviour {
         // movement = character.rotation * movement;
         // movement = movement.normalized * moveSpeed;
 
+        Vector3 playerDir = Vector3.Normalize(cameraGameObject.transform.forward);
+        playerDir.y = 0;
+
+        player.transform.forward = playerDir;
+
+        movement = transform.TransformDirection(movement);
         player.Move(movement * Time.deltaTime);
 
         //rotate to where were moving
         //  this.transform.rotation = Quaternion.LookRotation(movement);
         // this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
         Vector3 facingrotation = Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0f , Input.GetAxis("Vertical")));
+        facingrotation = transform.TransformDirection(facingrotation);
         if (facingrotation != Vector3.zero)
         {
             //This condition prevents from spamming "Look rotation viewing vector is zero" when not moving.

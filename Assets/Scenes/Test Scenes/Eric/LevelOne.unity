@@ -4828,7 +4828,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpFactor: 4
   backingFactor: 4
-  loweringFactor: 2
+  loweringFactor: 0.3
+  rotationSpeed: 2
+  distanceBehindPlayer: 3.5
+  distanceAbovePlayer: 1.8
+  postRiseAngle: -15
   player: {fileID: 0}
   gameloop: {fileID: 0}
   translucentMaterial: {fileID: 2100000, guid: d2316eb0cb03b044387d90706d66b1ea, type: 2}
@@ -23872,11 +23876,6 @@ Prefab:
     - target: {fileID: 4665352608260108, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}
       propertyPath: m_LocalRotation.w
       value: -0.2979785
-      objectReference: {fileID: 0}
-    - target: {fileID: 143928190879284250, guid: 01a914fc88a23f542a47d818149c09dd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01a914fc88a23f542a47d818149c09dd, type: 2}

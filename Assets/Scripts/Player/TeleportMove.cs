@@ -19,6 +19,8 @@ public class TeleportMove : MonoBehaviour
 
     public float teleportMaxTime = 0.5f;
 
+    public float teleportMinInterval = 0.5f;
+
     public int damage = 100;
 
     public GameObject graphicsGameObject;
@@ -30,14 +32,14 @@ public class TeleportMove : MonoBehaviour
     CharacterController characterController;
     PlayerController playerController;
 
-    bool isTeleporting = false;
-
     Vector3 teleportSource;
     Vector3 teleportTarget;
 
     Vector3 oldScale;
 
     float teleportStartTime;
+
+    float lastTeleportEndTime = 0;
 
     void Awake()
     {
@@ -47,15 +49,15 @@ public class TeleportMove : MonoBehaviour
 
     // Use this for initialization
     void Start ()
-	{
-
-	}
+    {
+        StartCoroutine("startCheckForShrink");
+    }
 	
 	// Update is called once per frame
 	void Update () {
 	    if (Input.GetButton("Fire1"))
 	    {
-	        if (playerController.canMove)
+	        if (playerController.canMove && Time.time - lastTeleportEndTime > teleportMinInterval)
 	        {
 	            Vector3 dir = transform.forward.normalized;
 	            RaycastHit raycastHit;
@@ -159,13 +161,26 @@ public class TeleportMove : MonoBehaviour
         characterController.detectCollisions = true;
         GetComponent<BoxCollider>().enabled = false;
 
-
+        lastTeleportEndTime = Time.time;
         playerController.canMove = true;
         currentState = State.Idle;
 
 
         transmissionParticleSystem.Stop();
         chidoriParticleSystem.Stop();
+    }
+
+    IEnumerator startCheckForShrink()
+    {
+        while (playerController != null)
+        {
+            yield return new WaitForSeconds(6);
+            if (graphicsGameObject.transform.localScale == Vector3.zero)
+            {
+                oldScale = Vector3.one;
+                stopTeleport();
+            }
+        }
     }
 
     void OnTriggerEnter(Collider collider)

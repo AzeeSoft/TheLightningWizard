@@ -66,10 +66,9 @@ public class GameManager : MonoBehaviour {
         SpawnEnemy();
         //spawnPlayer();
         //spawnPlayer();
-      
-
 
     }
+
     private void FixedUpdate()
     {
 
@@ -85,8 +84,15 @@ public class GameManager : MonoBehaviour {
             SpawnEnemy();
         }
 
-        bar.fillAmount = (float)Health / (float)mHealth;
-        magicBar.fillAmount = (float)Mana / (float)mMana;
+        try
+        {
+            bar.fillAmount = (float) Health/(float) mHealth;
+            magicBar.fillAmount = (float) Mana/(float) mMana;
+        }
+        catch (Exception e)
+        {
+            
+        }
     }
 
     // Update is called once per frame
@@ -112,7 +118,7 @@ public class GameManager : MonoBehaviour {
             countdown();
             if (time == 0)
             {
-                SceneManager.LoadScene("levelOne", LoadSceneMode.Single);//load scene level
+                SceneManager.LoadScene("levelOne", LoadSceneMode.Single);   //load scene level
             }
         }
 
@@ -162,6 +168,7 @@ public class GameManager : MonoBehaviour {
         }
 		AI.autoFetchAIUnits ();
     }
+
     //Spawning in Player;
     void spawnPlayer()
     {

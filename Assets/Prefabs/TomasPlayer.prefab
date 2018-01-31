@@ -1050,7 +1050,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922497896325908}
-  m_LocalRotation: {x: 0.5026363, y: -0.16459823, z: 0.7946528, w: -0.29797852}
+  m_LocalRotation: {x: 0.50263625, y: -0.16459821, z: 0.7946527, w: -0.2979785}
   m_LocalPosition: {x: -0.6523014, y: 0.00000004284084, z: 0.000000044703484}
   m_LocalScale: {x: 0.9999997, y: 1.0000005, z: 1.0000001}
   m_Children:
@@ -1148,7 +1148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888278684232642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: 0.144, z: -0.64}
+  m_LocalPosition: {x: -0.08, y: 0.14, z: -45.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358812310876916}
@@ -1432,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ddd42323339484ab985854e8d6b8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraGameObject: {fileID: 0}
   LBall: {fileID: 1736647453064262, guid: bfd14d1a6ae7fc84bb8bf02d58fa8643, type: 2}
   moveSpeed: 5
   jumpSpeed: 8
@@ -1452,10 +1453,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportRange: 7
-  teleportSpeed: 0.7
+  teleportSpeed: 0.2
   dabPercent: 10
   teleportRangeAjdusment: 1
   teleportMaxTime: 0.5
+  teleportMinInterval: 0
   damage: 100
   graphicsGameObject: {fileID: 1871959942420836}
   transmissionParticleSystem: {fileID: 198553786168733132}
@@ -1479,6 +1481,7 @@ MonoBehaviour:
   - {fileID: 137392792301588510}
   - {fileID: 137991500525801016}
   HitColor: {r: 1, g: 0, b: 0, a: 0}
+  soundManager: {fileID: 0}
 --- !u!137 &137108208171987260
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

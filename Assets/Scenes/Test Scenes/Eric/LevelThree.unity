@@ -5223,7 +5223,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpFactor: 4
   backingFactor: 4
-  loweringFactor: 2
+  loweringFactor: 0.3
+  rotationSpeed: 2
+  distanceBehindPlayer: 3.5
+  distanceAbovePlayer: 1.8
+  postRiseDistance: 2
   player: {fileID: 0}
   gameloop: {fileID: 0}
   translucentMaterial: {fileID: 2100000, guid: d2316eb0cb03b044387d90706d66b1ea, type: 2}
