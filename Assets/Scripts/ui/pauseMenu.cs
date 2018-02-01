@@ -11,7 +11,7 @@ public class pauseMenu : MonoBehaviour {
 
     public GameObject optionsVol;
     private GameManager gameloop;
-  
+
 
     void Start()
     {
@@ -25,24 +25,17 @@ public class pauseMenu : MonoBehaviour {
         // Enable pause menu
         if (Input.GetKeyDown(KeyCode.Escape)  && !isEnabled)
         {
-            pause.SetActive(true);
-            isEnabled = true;
-            Time.timeScale = 0;
-
+            enablePauseMenu();
         }
 
         // disable pause menu
         else if (Input.GetKeyDown(KeyCode.Escape) && isEnabled)
         {
-            pause.SetActive(false);
-            isEnabled = false;
-            Time.timeScale = 1;
+            disablePauseMenu();
         }
         if (Input.GetKeyDown(KeyCode.JoystickButton7) && !isEnabled)
         {
-            pause.SetActive(true);
-            isEnabled = true;
-            Time.timeScale = 0;
+            enablePauseMenu();
             //quitBtn.SetActive(true);
             //adds.SetActive(false);
         }
@@ -50,15 +43,12 @@ public class pauseMenu : MonoBehaviour {
         // disable pause menu
         else if (Input.GetKeyDown(KeyCode.JoystickButton7) && isEnabled)
         {
-            pause.SetActive(false);
-            isEnabled = false;
-            Time.timeScale = 1;
+            disablePauseMenu();
         }
+
         if (Input.GetKeyDown(KeyCode.JoystickButton9) && !isEnabled)
         {
-            pause.SetActive(true);
-            isEnabled = true;
-            Time.timeScale = 0;
+            enablePauseMenu();
             //quitBtn.SetActive(true);
             //adds.SetActive(false);
         }
@@ -66,23 +56,36 @@ public class pauseMenu : MonoBehaviour {
         // disable pause menu
         else if (Input.GetKeyDown(KeyCode.JoystickButton9) && isEnabled)
         {
-            pause.SetActive(false);
-            isEnabled = false;
-            Time.timeScale = 1;
+            disablePauseMenu();
         }
     }
+
+
+    void enablePauseMenu()
+    {
+        isEnabled = true;
+        Time.timeScale = 0;
+        pause.SetActive(true);
+    }
+
+    void disablePauseMenu()
+    {
+        pause.SetActive(false);
+        Time.timeScale = 1;
+        isEnabled = false;
+    }
+
+
     public void SaveButton()
     {
-         
         gameloop.Save();
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
-    public void Resume(){
-        pause.SetActive(false);
-        isEnabled = false;
-        Time.timeScale = 1;
+    public void Resume()
+    {
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+        disablePauseMenu();
     }
 
     public void Options(){
@@ -92,10 +95,9 @@ public class pauseMenu : MonoBehaviour {
 
     public void Quit()
     {
-        SceneManager.LoadScene("startMenu 1", LoadSceneMode.Single);//loads start menu
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
-		Time.timeScale = 1;
-
+        SceneManager.LoadScene("NewStartMenu", LoadSceneMode.Single);//loads start menu
+        Time.timeScale = 1;
     }
 
     public void GetVolume(float vol){

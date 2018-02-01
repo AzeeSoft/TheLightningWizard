@@ -9,6 +9,7 @@ TagManager:
   - playerExit
   - Enemy
   - Unit
+  - ScreenManager
   layers:
   - Default
   - TransparentFX
