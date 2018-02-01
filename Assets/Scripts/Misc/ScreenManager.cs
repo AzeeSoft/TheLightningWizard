@@ -1,15 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenManager : MonoBehaviour
 {
+    public const float openDuration = 1f;
+    public const float closeDuration = 1f;
 
-    public Animator screenTransitionAnim;
+    public GameObject screenTransitionCanvas;
 
-	// Use this for initialization
-	void Start () {
-        open();
+    Animator screenTransitionAnim;
+
+    // Use this for initialization
+    void Start ()
+    {
+        screenTransitionAnim = screenTransitionCanvas.GetComponent<Animator>();
+
+        screenTransitionCanvas.SetActive(true);
+        open(() =>
+        {
+            
+        });
 	}
 	
 	// Update is called once per frame
@@ -17,13 +31,44 @@ public class ScreenManager : MonoBehaviour
 		
 	}
 
-    void open()
+    void blockEvents()
     {
-        screenTransitionAnim.SetBool("Open", true);
+        screenTransitionCanvas.GetComponent<GraphicRaycaster>().enabled = true;
     }
 
-    void close()
+    void allowEvents()
     {
-        screenTransitionAnim.SetBool("Open", false);
+        screenTransitionCanvas.GetComponent<GraphicRaycaster>().enabled = false;
     }
+
+    public void open(OnTransitionComplete callback)
+    {
+        blockEvents();
+
+        screenTransitionAnim.SetBool("Open", true);
+        StartCoroutine(AzeeTools.executeAfter(() =>
+        {
+            allowEvents();
+
+            if (callback != null)
+                callback();
+        }, openDuration));
+    }
+
+    public void close(OnTransitionComplete callback)
+    {
+        blockEvents();
+
+        screenTransitionAnim.SetBool("Open", false);
+        StartCoroutine(AzeeTools.executeAfter(() =>
+        {
+            allowEvents();
+
+            if (callback != null)
+                callback();
+            
+        }, closeDuration));
+    }
+
+    public delegate void OnTransitionComplete();
 }

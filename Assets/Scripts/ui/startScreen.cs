@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEditor;
 
 public class startScreen : MonoBehaviour
 {
-	
+    public ScreenManager screenManager;
+
 	public int Level = 1;
 	public int pLevel = 0;
 	public int nextLevel = 5;
@@ -77,46 +79,66 @@ public class startScreen : MonoBehaviour
 
     public void StartButton()
     {
-		StreamWriter sw = File.CreateText(FILE_NAME);
-
-		//Player
-		sw.WriteLine(Level);
-		sw.WriteLine(pLevel);
-		sw.WriteLine(nextLevel);
-		sw.WriteLine(ex);
-		sw.WriteLine(Speed);
-		sw.WriteLine(Health);
-		sw.WriteLine(mHealth);
-
-		sw.Close();
-
-        SceneManager.LoadScene("levelOne", LoadSceneMode.Single);//load scene level
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+
+        screenManager.close(() =>
+        {
+            StreamWriter sw = File.CreateText(FILE_NAME);
+
+            //Player
+            sw.WriteLine(Level);
+            sw.WriteLine(pLevel);
+            sw.WriteLine(nextLevel);
+            sw.WriteLine(ex);
+            sw.WriteLine(Speed);
+            sw.WriteLine(Health);
+            sw.WriteLine(mHealth);
+
+            sw.Close();
+
+            SceneManager.LoadScene("levelOne", LoadSceneMode.Single);//load scene level
+        });
     }
 
     
     public void Controls()
     {
-		controls.SetActive(true);
-		backbutton.SetActive(true);
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
-        
+        screenManager.close(() =>
+        {
+            controls.SetActive(true);
+            backbutton.SetActive(true);
+
+            screenManager.open(null);
+        });
     }
     public void CreditsButton()
     {
-        timeron = true;
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
-       
+        screenManager.close(() =>
+        {
+            timeron = true;
 
+            screenManager.open(null);
+        });
     }
     public void BackButton()
     {
-        controls.SetActive(false);
-        backbutton.SetActive(false);
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+        screenManager.close(() =>
+        {
+            controls.SetActive(false);
+            backbutton.SetActive(false);
+
+            screenManager.open(null);
+        });
     }
 
     public void ExitGame()
     {
-        Application.Quit();
+        screenManager.close(() =>
+        {
+            Application.Quit();
+        });
     }
 }
